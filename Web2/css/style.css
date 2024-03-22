@@ -1,0 +1,17 @@
+body{
+    background-color: white;
+}
+.listaOp{
+    
+    background-color: rgba(128, 128, 128, 0.568);
+    text-align: left;
+    height: 500px;
+    width: 150px;
+}
+.parrafo1{
+    
+    background-color: blueviolet;
+    height: 150%;
+    width: 200%;
+    
+}
