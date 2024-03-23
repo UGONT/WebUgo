@@ -1,31 +1,56 @@
 body {
-  background-color: white;
+  background-color: rgb(64, 64, 64);
+  font-family: sans-serif;
 }
 .listaOp {
-  background-color: rgba(128, 128, 128, 0.568);
+  
   text-align: left;
-  height: 500px;
-  width: 150px;
+  height: 670px;
+  width: 160px;
   position: absolute;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: rgba(255, 255, 255, 0.459);
+  
+}
+ul{
+  list-style: none;
+}
+p{
+  color: white;
+}
+h3{
+  color: white;
 }
 
 .parrafo1 {
-  background-color: blueviolet;
-  float: right;
-  margin-right: 14em;
-}
-.parrafo2 {
   background-color: aqua;
   float: right;
-  margin-right: 14em;
+  margin-right: 180px;
+  padding: 10px;
+  text-align: left;
+  
+  
+}
+.parrafo2 {
+  background-color:yellow;
+  float: right;
+  margin-right: 180px;
+  padding: 10px;
 }
 .parrafo3 {
-  background-color: brown;
+  background-color: rgb(230, 73, 16);
   float: right;
-  margin-right: 14em;
+  margin-right: 180px;
+  padding: 10px;
 }
 .parrafo4 {
-  background-color: chartreuse;
+  background-color: rgba(202, 0, 0, 0.88);
   float: right;
-  margin-right: 14em;
+  margin-right: 180px;
+  padding: 10px;
 }
