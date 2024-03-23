@@ -1,54 +1,46 @@
-body{
-    
-    font-family: 'Courier New', Courier, monospace;
-    background-image:url(/Imagenes/gato3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-image: url(/Imagenes/gato3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
-h1,h2{
-    text-align: center;
-
+h1,
+h2 {
+  text-align: center;
 }
-#para1{
-    width: 50%;
-    margin: auto;
-    border: 3px solid white;
-    background-color: black;
-
+#para1 {
+  width: 50%;
+  margin: auto;
+  border: 3px solid white;
+  background-color: black;
 }
-li{
-    display: block;
-    text-align: center;
-
+li {
+  display: block;
+  text-align: center;
 }
 
-
-img{
-    display: block;
-    margin: auto;
-    border: 3px solid black;
-    border-radius: 25%;
-    transition: height 2s , width 2s,border-color 2s;
-
+img {
+  display: block;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 25%;
+  transition: height 2s, width 2s, border-color 2s;
 }
 
-a{
-    display: block;
-    text-align: center;
-    margin-bottom: 10%;
-    color: white;
-    text-decoration: none;
-
+a {
+  display: block;
+  text-align: center;
+  margin-bottom: 10%;
+  color: white;
+  text-decoration: none;
 }
-a:hover{
-    opacity: 75%;
-
+a:hover {
+  opacity: 75%;
 }
-img:hover{
-    width: 380px;
-    height: 340px;
-    border-color: coral;
+img:hover {
+  width: 380px;
+  height: 340px;
+  border-color: coral;
 }

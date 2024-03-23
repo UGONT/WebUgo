@@ -3,54 +3,55 @@ body {
   font-family: sans-serif;
 }
 .listaOp {
-  
   text-align: left;
   height: 670px;
   width: 160px;
   position: absolute;
 }
-a{
+a {
   text-decoration: none;
   color: white;
 }
-a:hover{
+a:hover {
   color: rgba(255, 255, 255, 0.459);
-  
 }
-ul{
+ul {
   list-style: none;
 }
-p{
+p {
   color: white;
 }
-h3{
+h3 {
   color: white;
 }
 
 .parrafo1 {
+  display:block;
   background-color: aqua;
   float: right;
   margin-right: 180px;
   padding: 10px;
   text-align: left;
-  
-  
+  font-size: 18px;
 }
 .parrafo2 {
-  background-color:yellow;
+  background-color: yellow;
   float: right;
   margin-right: 180px;
   padding: 10px;
+  font-size: 18px;
 }
 .parrafo3 {
   background-color: rgb(230, 73, 16);
   float: right;
   margin-right: 180px;
   padding: 10px;
+  font-size: 18px;
 }
 .parrafo4 {
   background-color: rgba(202, 0, 0, 0.88);
   float: right;
   margin-right: 180px;
   padding: 10px;
+  font-size: 18px;
 }
