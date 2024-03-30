@@ -5,17 +5,6 @@ body {
   margin-left: 5%; 
   margin-right: 5%
 }
-#btn {
-  margin-right: 30px;
-  margin-left: 30px;
-}
-#btn:hover {
-  color: black;
-}
-.nav-item:hover {
-  background-color: orange;
-  border-radius: 5%;
-}
 img {
   margin-right: 5%;
   margin-left: 5%;
@@ -23,12 +12,23 @@ img {
   height: auto;
   max-width: 90%;
 }
+.nav-link{
+  width: 150px;
+  text-align: center;
+}
+.nav-link:hover{
+  background-color: orange;
+  border-radius: 8%;
+}
+
+
 .nav-link {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: large;
-  color: orange;
 }
-
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: rgb(0, 0, 0);
+}
 .bg-light-custom{
   background-color: rgb(230, 230, 230);
 }
@@ -38,6 +38,18 @@ img {
 .navbar-toggler{
   background-color: orange;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu{
   display: block;
 }
+
+.img{
+
+  display: inline-block;
+  margin: 10px;
+  width: 225px;
+  height: 225px;
+}
+/*Comentario waa
+osiosi
+*/
+
