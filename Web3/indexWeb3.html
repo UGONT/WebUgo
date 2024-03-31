@@ -11,9 +11,7 @@
   <body>
     <header>
       <!--Inicio barra-->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-light-custom"
-      >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light-custom">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -24,7 +22,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -35,13 +33,20 @@
                 <a class="nav-link" href="#">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle-split" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="nav-link dropdown-toggle-split"
+                  href=""
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Adopta
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/Web3/perros.html">Perros</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/Web3/perros.html">Perros</a>
+                  </li>
                   <li><a class="dropdown-item" href="#">Gatos</a></li>
-                  
                 </ul>
               </li>
               <li class="nav-item">
@@ -61,49 +66,23 @@
     </header>
     <main>
       <!--inicio carrusel-->
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="/Imagenes/gato1.jpeg"
-              class="d-block"
-              alt="..."            
-            />
+            <img src="/Imagenes/gato1.jpeg" class="d-block w-100 carro" alt="...">
           </div>
           <div class="carousel-item">
-            <img 
-              src="/Imagenes/gato2.jpg" 
-              class="d-block" 
-              alt="..."             
-            />
+            <img src="/Imagenes/gato2.jpg" class="d-block w-100 carro" alt="...">
           </div>
           <div class="carousel-item">
-            <img 
-              src="/Imagenes/gato3.jpg" 
-              class="d-block" 
-              alt="..." 
-            />
+            <img src="/Imagenes/gato3.jpg" class="d-block w-100 carro" alt="...">
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>

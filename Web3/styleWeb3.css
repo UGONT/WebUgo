@@ -5,7 +5,7 @@ body {
   margin-left: 5%; 
   margin-right: 5%
 }
-img {
+.carro {
   margin-right: 5%;
   margin-left: 5%;
   width: 100%;
@@ -20,8 +20,6 @@ img {
   background-color: orange;
   border-radius: 8%;
 }
-
-
 .nav-link {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: large;
@@ -41,14 +39,37 @@ img {
 .dropdown:hover .dropdown-menu{
   display: block;
 }
+.imgC {
+  float: inline-start;
+  width: 250px;
+  padding: 30px 30px 30px 30px;
+  background-color: aqua;
 
-.img{
-
-  display: inline-block;
-  margin: 10px;
-  width: 225px;
-  height: 225px;
 }
+.imagenes {
+  margin-left: 12%;
+}
+
+.galeria {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.item imgPerro {
+  width: 40px;
+  height: auto;
+}
+
+.item p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
 /*Comentario waa
 osiosi
 */
