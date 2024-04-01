@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perros</title>
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- Link Custom Css-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body background="/Imagenes/background_perros.jpg">
+    <header>
+      <!-- Inicio Barra Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container-fluid mx-3">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/Imagenes/icono.png"
+              alt="Logo"
+              width="38"
+              height="34"
+              class=""
+            />
+            AdoptaUnPeludo</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-4 mb-lg-0 h4">
+              <li class="nav-item">
+                <a
+                  class="nav-link px-4"
+                  aria-current="page"
+                  href="/ProyectoAdopcion/index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active px-4 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Adopta
+                </a>
+                <ul class="dropdown-menu bg-warning">
+                  <li><a class="dropdown-item h4" href="perros.html">Perros</a></li>
+                  <li><a class="dropdown-item h4" href="gatos.html">Gatos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Fin Barra Nav -->
+    </header>
+    <main>
+      <!-- Inicio Card -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div
+              class="card text-center mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img src="/Imagenes/perro1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Chocolo</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center mb-3">
+              <img src="/Imagenes/perro5.jfif" class="card-img-top" alt="..." height="300"/>
+              <div class="card-body">
+                <h5 class="card-title">Gustabo</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center mb-3">
+              <img src="/Imagenes/perro1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Perro 3</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content.This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center mb-3">
+              <img src="/Imagenes/perro1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Perro 4</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin Card -->
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3" id="exampleModalLabel"></h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h1 class="h1 text-center pb-3">CHOCOLO</h1>
+              <img
+                src="/Imagenes/perro1.jpg"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+              <div class="row p-5 fs-4">
+                <ul>
+                  <li>Nombre: Chocolo</li>
+                  <li>Edad: 3 años</li>
+                  <li>Sexo: Macho</li>
+                  <li>Peso:27kg</li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Atras
+              </button>
+              <button type="button" class="btn btn-primary">ADOPTAR!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin Modal -->
+    </main>
+    <footer></footer>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
