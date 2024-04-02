@@ -59,8 +59,12 @@
                   Adopta
                 </a>
                 <ul class="dropdown-menu bg-warning">
-                  <li><a class="dropdown-item h4" href="perros.html">Perros</a></li>
-                  <li><a class="dropdown-item h4" href="gatos.html">Gatos</a></li>
+                  <li>
+                    <a class="dropdown-item h4" href="perros.html">Perros</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item h4" href="gatos.html">Gatos</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -83,7 +87,7 @@
             <div
               class="card text-center mb-3"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#Modal_1"
             >
               <img src="/Imagenes/gato1.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
@@ -97,8 +101,17 @@
             </div>
           </div>
           <div class="col">
-            <div class="card text-center mb-3">
-              <img src="/Imagenes/gato3.jpg" class="card-img-top" alt="..." height="300"/>
+            <div
+              class="card text-center mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#Modal_2"
+            >
+              <img
+                src="/Imagenes/gato3.jpg"
+                class="card-img-top"
+                alt="..."
+                height="300"
+              />
               <div class="card-body">
                 <h5 class="card-title">Jamon</h5>
                 <p class="card-text">
@@ -141,7 +154,7 @@
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal"
+        id="Modal_1"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -187,6 +200,56 @@
         </div>
       </div>
       <!-- Fin Modal -->
+      <!-- Modal 2-->
+      <div
+        class="modal fade"
+        id="Modal_2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3" id="exampleModalLabel"></h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h1 class="h1 text-center pb-3">JAMON</h1>
+              <img
+                src="/Imagenes/gato3.jpg"
+                alt=""
+                class="img-fluid rounded-2"
+                width="500px"
+              />
+              <div class="row p-5 fs-4">
+                <ul>
+                  <li>Nombre: Jamon</li>
+                  <li>Edad: 1 año</li>
+                  <li>Sexo: Macho</li>
+                  <li>Peso: 4kg</li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Atras
+              </button>
+              <button type="button" class="btn btn-primary">ADOPTAR!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin Modal 2-->
     </main>
     <footer></footer>
     <script src="/js/bootstrap.bundle.min.js"></script>

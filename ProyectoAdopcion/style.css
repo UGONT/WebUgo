@@ -2,4 +2,6 @@
   width: 450px;
   margin: 10%;
 }
-
+.card img{
+  border-radius: 5%;
+}
