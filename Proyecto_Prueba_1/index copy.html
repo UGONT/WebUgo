@@ -59,20 +59,158 @@
         <div class="p-2 bloque-grande">
           <!-- Bloque 3: Barra de navegación -->
           <nav class="nav justify-content-center">
-            <a class="nav-link active me-3" href="#">Inicio</a>
-            <a class="nav-link me-3" href="#">Productos</a>
-            <a class="nav-link me-3" href="#">Servicios</a>
-            <a class="nav-link me-3" href="#">Contacto</a>
-            <a class="nav-link me-3" href="#">Servicios</a>
-            <a class="nav-link me-3" href="#">Contacto</a>
-            <a class="nav-link me-3" href="#">Servicios</a>
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link active me-3 nav-custom" href="#">Inicio</a>
+            <a class="nav-link me-3 nav-custom" href="#">Productos</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link nav-custom" href="#">Contacto</a>
           </nav>
         </div>
       </div>
     </header>
     <main>
-      
+      <!-- Inicio Carrusel -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="imagenes/imagen_carrusel_1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes/imagen_carrusel_2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes/imagen_carrusel_3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes/imagen_carrusel_4.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      <!-- Fin Carrusel -->
+      <h2 class="text-center mt-4 mb-4">Nuestros productos</h2>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_1.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">BATMAN: <br />VENENO</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_2.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">
+                Batman: La muerte de <br />la familia ...
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_3.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">BATMAN:<br />RESPALDO</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_4.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">Batman: La Broma Asesina (Grandes...)</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_5.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">Marvel Must-Have. Spiderman: La ú..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_6.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">100% Marvel HC: Spiderman. ¡Nada ..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_7.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">Marvel Must-Have. Ultimate Spider..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img src="imagenes/comic_8.webp" alt="" class="img-fluid m-2" />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <!-- Link JS -->

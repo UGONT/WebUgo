@@ -5,19 +5,24 @@ body {
 .bloque-pequeno {
   height: 30px; /* Altura pequeña para la franja */
 }
-
-.bloque-grande {
-  height: 70px; /* Un poco más grande que el primer bloque, pero no tanto como el segundo */
-}
-
 .bloque-mediano {
   height: 110px; /* Altura mediana para el bloque principal */
 }
+.bloque-grande {
+  height: 75px; /* Un poco más grande que el primer bloque, pero no tanto como el segundo */
+}
 #logo {
-    height: 80px;
-    width: 230px;
+  height: 80px;
+  width: 230px;
 }
 #carrito {
-    height: 35px;
-    width: 35px;
+  height: 35px;
+  width: 35px;
+}
+.nav-custom {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.nav-custom:hover {
+  color: #13c0ff;
 }
