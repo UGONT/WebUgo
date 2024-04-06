@@ -1,15 +1,14 @@
 body {
   background-color: rgb(217, 217, 217);
 }
-/* style.css */
 .bloque-pequeno {
-  height: 30px; /* Altura pequeña para la franja */
+  height: 30px; 
 }
 .bloque-mediano {
-  height: 110px; /* Altura mediana para el bloque principal */
+  height: 110px;
 }
 .bloque-grande {
-  height: 75px; /* Un poco más grande que el primer bloque, pero no tanto como el segundo */
+  height: 75px; 
 }
 #logo {
   height: 80px;
