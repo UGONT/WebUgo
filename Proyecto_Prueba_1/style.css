@@ -1,3 +1,23 @@
 body {
-    background-color: rgb(233, 233, 233);
+  background-color: rgb(217, 217, 217);
+}
+/* style.css */
+.bloque-pequeno {
+  height: 30px; /* Altura pequeña para la franja */
+}
+
+.bloque-grande {
+  height: 70px; /* Un poco más grande que el primer bloque, pero no tanto como el segundo */
+}
+
+.bloque-mediano {
+  height: 110px; /* Altura mediana para el bloque principal */
+}
+#logo {
+    height: 80px;
+    width: 230px;
+}
+#carrito {
+    height: 35px;
+    width: 35px;
 }
