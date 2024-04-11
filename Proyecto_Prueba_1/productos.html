@@ -1,80 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
     <!-- Link Bootstrap -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <!-- Link style -->
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header class="d-flex flex-column">
-        <!-- Bloque 1 -->
-        <div class="p-2 bg-warning bloque-pequeno">
-          
-        </div>
-  
-        <!-- Bloque 2 -->
-        <div class="p-2 bloque-mediano">
-          <div class="p-2 bloque-grande">
-            <div class="row justify-content-center align-items-center">
-              <!-- Logo -->
-              <div class="col-4 text-center">
-                <a href="#">
-                  <img id="logo" src="imagenes/Logo_robado_waaaa.png" alt="" />
-                </a>
+      <!-- Bloque 1 -->
+      <div class="p-2 bg-warning bloque-pequeno"></div>
+
+      <!-- Bloque 2 -->
+      <div class="p-2 bloque-mediano">
+        <div class="p-2 bloque-grande">
+          <div class="row justify-content-center align-items-center">
+            <!-- Logo -->
+            <div class="col-4 text-center">
+              <a href="#">
+                <img id="logo" src="imagenes/Logo_robado_waaaa.png" alt="" />
+              </a>
+            </div>
+            <!-- Barra de búsqueda -->
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Buscar productos..."
+                />
+                <button class="btn btn-outline bg-primary" type="button">
+                  Buscar
+                </button>
               </div>
-              <!-- Barra de búsqueda -->
-              <div class="col-4">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Buscar productos..."
-                  />
-                  <button class="btn btn-outline bg-primary" type="button">
-                    Buscar
-                  </button>
-                </div>
-              </div>
-              <!-- Carrito -->
-              <div
-                class="col-4 text-center d-flex align-items-center justify-content-center"
+            </div>
+            <!-- Carrito -->
+            <div
+              class="col-4 text-center d-flex align-items-center justify-content-center"
+            >
+              <a
+                href="carrito.html"
+                class="d-flex align-items-center"
+                style="text-decoration: none; color: black"
               >
-                <a
-                  href="carrito.html"
-                  class="d-flex align-items-center"
-                  style="text-decoration: none; color: black"
-                >
-                  <img id="carrito" src="imagenes/carrito.png" alt="" />
-                  <h6 class="mb-0 ms-2">Mi carrito</h6>
-                  <h6 class="mb-0 ms-2" style="color: darkblue">0$</h6>
-                </a>
-              </div>
+                <img id="carrito" src="imagenes/carrito.png" alt="" />
+                <h6 class="mb-0 ms-2">Mi carrito</h6>
+                <h6 class="mb-0 ms-2" style="color: darkblue">0$</h6>
+              </a>
             </div>
           </div>
         </div>
-  
-        <!-- Bloque 3 Barra de navegacion-->
-        <div class="p-2 bg-success bloque-grande">
-          <div class="p-2 bloque-grande">
-            <!-- Barra de navegación -->
-            <nav class="nav justify-content-center">
-              <a class="nav-link active me-3 nav-custom" href="index copy.html">Inicio</a>
-              <a class="nav-link me-3 nav-custom" href="productos.html">Productos</a>
-              <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-              <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
-              <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-              <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
-              <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-              <a class="nav-link nav-custom" href="#">Contacto</a>
-            </nav>
+      </div>
+
+      <!-- Bloque 3 Barra de navegacion-->
+      <div class="p-2 bg-success bloque-grande">
+        <div class="p-2 bloque-grande">
+          <!-- Barra de navegación -->
+          <nav class="nav justify-content-center">
+            <a class="nav-link active me-3 nav-custom" href="index copy.html"
+              >Inicio</a
+            >
+            <a class="nav-link me-3 nav-custom" href="productos.html"
+              >Productos</a
+            >
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link nav-custom" href="#">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col mt-5">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_1.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">BATMAN: <br />VENENO</p>
+            </div>
+          </div>
+          <div class="col mt-5">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_2.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">
+                Batman: La muerte de <br />la familia ...
+              </p>
+            </div>
+          </div>
+          <div class="col mt-5">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_3.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">BATMAN:<br />RESPALDO</p>
+            </div>
+          </div>
+          <div class="col mt-5">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_4.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Batman: La Broma Asesina (Grandes...)</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_5.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Must-Have. Spiderman: La ú..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_6.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">100% Marvel HC: Spiderman. ¡Nada ..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_7.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Must-Have. Ultimate Spider..</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_8.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_8.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_8.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_8.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 bg-light border rounded">
+              <img
+                src="imagenes/comic_8.webp"
+                alt=""
+                class="img-fluid m-2 mx-auto d-block"
+              />
+              <p class="text-center">Marvel Multiverso. Spiderman: Reino</p>
+            </div>
+            
           </div>
         </div>
-      </header>
+      </div>
+    </main>
     <!-- Link JS -->
     <script src="/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
