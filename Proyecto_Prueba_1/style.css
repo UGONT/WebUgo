@@ -20,8 +20,39 @@ body {
 }
 .nav-custom {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #f3f2f2;
 }
 .nav-custom:hover {
   color: #13c0ff;
+}
+
+.precio {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-controls .num{
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #ab1717; 
+  color: white;              
+  padding: 100px 50px;     
+  text-align: center;     
+  font-size: 16px;        
 }
