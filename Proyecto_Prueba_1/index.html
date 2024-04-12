@@ -42,9 +42,12 @@
               class="col-4 text-center d-flex align-items-center justify-content-center"
             >
               <a
-                href="carrito.html"
+                href=""
                 class="d-flex align-items-center"
                 style="text-decoration: none; color: black"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
               >
                 <img id="carrito" src="imagenes/carrito.png" alt="" />
                 <h6 class="mb-0 ms-2">Mi carrito</h6>
@@ -68,7 +71,7 @@
             >
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
             <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
-            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="nosotros.html">Nosotros</a>
             <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
             <a class="nav-link nav-custom" href="#">Contacto</a>
@@ -268,9 +271,11 @@
             </div>
           </div>
           <div class="col">
-            <div class="p-3 bg-light border rounded"
-                  data-bs-toggle="modal"
-                  data-bs-target="#Modal_5">
+            <div
+              class="p-3 bg-light border rounded"
+              data-bs-toggle="modal"
+              data-bs-target="#Modal_5"
+            >
               <img
                 src="imagenes/comic_5.webp"
                 alt=""
@@ -291,9 +296,11 @@
             </div>
           </div>
           <div class="col">
-            <div class="p-3 bg-light border rounded"
-                              data-bs-toggle="modal"
-                  data-bs-target="#Modal_5">
+            <div
+              class="p-3 bg-light border rounded"
+              data-bs-toggle="modal"
+              data-bs-target="#Modal_5"
+            >
               <img
                 src="imagenes/comic_6.webp"
                 alt=""
@@ -359,6 +366,37 @@
       </div>
       <hr class="my-5" />
 
+      <!-- Carrito -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            Resumen Carrito
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="containe">
+            <div class="row">
+              <div class="col">
+                <img src="imagenes/comic_1.webp" alt="" style="width: 200px; height: 200px;">
+                <p >hola</p>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Modal 1-->
       <div
         class="modal fade"
@@ -443,7 +481,9 @@
               ></button>
             </div>
             <div class="modal-body">
-              <h1 class="h1 text-center pb-3">BATMAN: La muerte de la familia ...</h1>
+              <h1 class="h1 text-center pb-3">
+                BATMAN: La muerte de la familia ...
+              </h1>
               <img
                 src="imagenes/comic_2.webp"
                 alt=""
@@ -455,8 +495,8 @@
                 <ul>
                   <li>Nombre: Batman: La muerte de la familia</li>
                   <li>
-                    Autores: Scott Snyder, James Tynion IV, Greg 
-                    Capullo, Jock, Jonathan Glapion, FCO Plascencia
+                    Autores: Scott Snyder, James Tynion IV, Greg Capullo, Jock,
+                    Jonathan Glapion, FCO Plascencia
                   </li>
                   <li>
                     Que contiene:
@@ -516,13 +556,11 @@
               <div class="row p-5 fs-4">
                 <ul>
                   <li>Nombre: BATMAN: Respaldo</li>
-                  <li>
-                    Autores: Chip Zdarsky, Jorge Jiménez, Tomeu Morey
-                  </li>
+                  <li>Autores: Chip Zdarsky, Jorge Jiménez, Tomeu Morey</li>
                   <li>
                     Que contiene:
                     <ol>
-                      <li>Batman  #125-130</li>
+                      <li>Batman #125-130</li>
                     </ol>
                   </li>
                   <li>Paginas: 224 páginas a color</li>
@@ -565,7 +603,9 @@
               ></button>
             </div>
             <div class="modal-body">
-              <h1 class="h1 text-center pb-3">BATMAN: La Broma Asesina (Grandes...)</h1>
+              <h1 class="h1 text-center pb-3">
+                BATMAN: La Broma Asesina (Grandes...)
+              </h1>
               <img
                 src="imagenes/comic_4.webp"
                 alt=""
@@ -576,9 +616,7 @@
               <div class="row p-5 fs-4">
                 <ul>
                   <li>Nombre: BATMAN: La broma asesina</li>
-                  <li>
-                    Autores: Alan Moore, Brian Bolland
-                  </li>
+                  <li>Autores: Alan Moore, Brian Bolland</li>
                   <li>
                     Que contiene:
                     <ol>
@@ -625,7 +663,9 @@
               ></button>
             </div>
             <div class="modal-body">
-              <h1 class="h1 text-center pb-3">Marvel Must-Have. Spiderman: La ú..</h1>
+              <h1 class="h1 text-center pb-3">
+                Marvel Must-Have. Spiderman: La ú..
+              </h1>
               <img
                 src="imagenes/comic_5.webp"
                 alt=""
@@ -636,9 +676,7 @@
               <div class="row p-5 fs-4">
                 <ul>
                   <li>Nombre:Marvel Must-Have. Spiderman: La ú..</li>
-                  <li>
-                    Autores: Mike Zeck, J. M. DeMatteis
-                  </li>
+                  <li>Autores: Mike Zeck, J. M. DeMatteis</li>
                   <li>
                     Que contiene:
                     <ol>
@@ -688,7 +726,9 @@
               ></button>
             </div>
             <div class="modal-body">
-              <h1 class="h1 text-center pb-3">100% Marvel HC: Spiderman. ¡Nada ..</h1>
+              <h1 class="h1 text-center pb-3">
+                100% Marvel HC: Spiderman. ¡Nada ..
+              </h1>
               <img
                 src="imagenes/comic_6.webp"
                 alt=""
@@ -698,10 +738,14 @@
               />
               <div class="row p-5 fs-4">
                 <ul>
-                  <li>Nombre:100% Marvel HC: Spiderman. ¡Nada puede detener al Juggernaut!</li>
                   <li>
-                    Autores: Greg LaRocque, Louise Simonson, Rob Liefeld, Todd McFarlane, Lee Weeks,
-                     John Romita Jr, Howard Mackie, Kieron Gillen, Roger Stern, Salvador Larroca
+                    Nombre:100% Marvel HC: Spiderman. ¡Nada puede detener al
+                    Juggernaut!
+                  </li>
+                  <li>
+                    Autores: Greg LaRocque, Louise Simonson, Rob Liefeld, Todd
+                    McFarlane, Lee Weeks, John Romita Jr, Howard Mackie, Kieron
+                    Gillen, Roger Stern, Salvador Larroca
                   </li>
                   <li>
                     Que contiene:
