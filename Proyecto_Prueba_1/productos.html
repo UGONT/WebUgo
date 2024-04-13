@@ -19,13 +19,13 @@
         <div class="p-2 bloque-grande">
           <div class="row justify-content-center align-items-center">
             <!-- Logo -->
-            <div class="col-4 text-center">
-              <a href="#">
+            <div class="col-3 text-center">
+              <a href="index.html">
                 <img id="logo" src="imagenes/images.png" alt="" />
               </a>
             </div>
             <!-- Barra de búsqueda -->
-            <div class="col-4">
+            <div class="col-3">
               <div class="input-group">
                 <input
                   type="text"
@@ -37,18 +37,27 @@
                 </button>
               </div>
             </div>
+            <!-- Botón de inicio de sesión -->
+            <div class="col-2 text-center">
+              <a href="session.html"
+                ><button class="btn btn-secondary">Inicio session</button></a
+              >
+            </div>
             <!-- Carrito -->
             <div
-              class="col-4 text-center d-flex align-items-center justify-content-center"
+              class="col-3 text-center d-flex align-items-center justify-content-center"
             >
               <a
-                href="carrito.html"
+                href=""
                 class="d-flex align-items-center"
                 style="text-decoration: none; color: black"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
               >
                 <img id="carrito" src="imagenes/carrito.png" alt="" />
                 <h6 class="mb-0 ms-2">Mi carrito</h6>
-                <h6 class="mb-0 ms-2" style="color: darkblue">0$</h6>
+                <h6 class="mb-0 ms-2" style="color: darkblue">$20.000</h6>
               </a>
             </div>
           </div>
@@ -67,11 +76,13 @@
               >Productos</a
             >
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-            <a class="nav-link nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="nosotros.html"
+              >Nosotros</a
+            >
           </nav>
         </div>
       </div>
@@ -151,7 +162,9 @@
                 alt=""
                 class="img-fluid m-2 mx-auto d-block"
               />
-              <p class="text-center">Batman: La Broma Asesina <br>(Grandes...)</p>
+              <p class="text-center">
+                Batman: La Broma Asesina <br />(Grandes...)
+              </p>
               <p class="text-center precio">$10.000</p>
               <div
                 class="quantity-controls text-center d-flex justify-content-center align-items-center"
@@ -332,11 +345,10 @@
                 </button>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
     </main>
     <footer>
       <div class="footer"></div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito</title>
+    <title>Sesion</title>
     <!-- Link Bootstrap -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <!-- Link style -->
@@ -39,7 +39,7 @@
             </div>
             <!-- Botón de inicio de sesión -->
             <div class="col-2 text-center">
-              <a href="session.html"><button class="btn btn-secondary">Inicio session</button></a>
+              <button class="btn btn-secondary">Inicio session</button>
             </div>
             <!-- Carrito -->
             <div
@@ -85,20 +85,26 @@
         </div>
       </div>
     </header>
-    <main>
-      <h2 class="text-center mt-4 mb-4">Carrito de compras</h2>
-      <div class="bg-danger mx-5 " style="height: 50px">
-        <span class="text-white mx-5">Tu carrito está vacío.</span>
-      </div>
-      
-      <div class="text-center mt-3 mb-4" >
-        <a href="index.html"><button
-          class="btn btn-danger"
-        >
-          Volver a la tienda
-        </button></a>
-      </div>
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Inicio de Sesión</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
     </main>
+    
+
     <!-- Link JS -->
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>

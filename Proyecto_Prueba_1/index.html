@@ -19,13 +19,13 @@
         <div class="p-2 bloque-grande">
           <div class="row justify-content-center align-items-center">
             <!-- Logo -->
-            <div class="col-4 text-center">
+            <div class="col-3 text-center">
               <a href="index.html">
                 <img id="logo" src="imagenes/images.png" alt="" />
               </a>
             </div>
             <!-- Barra de búsqueda -->
-            <div class="col-4">
+            <div class="col-3">
               <div class="input-group">
                 <input
                   type="text"
@@ -37,9 +37,13 @@
                 </button>
               </div>
             </div>
+            <!-- Botón de inicio de sesión -->
+            <div class="col-2 text-center">
+              <a href="session.html"><button class="btn btn-secondary">Inicio session</button></a>
+            </div>
             <!-- Carrito -->
             <div
-              class="col-4 text-center d-flex align-items-center justify-content-center"
+              class="col-3 text-center d-flex align-items-center justify-content-center"
             >
               <a
                 href=""
@@ -51,7 +55,7 @@
               >
                 <img id="carrito" src="imagenes/carrito.png" alt="" />
                 <h6 class="mb-0 ms-2">Mi carrito</h6>
-                <h6 class="mb-0 ms-2" style="color: darkblue">0$</h6>
+                <h6 class="mb-0 ms-2" style="color: darkblue">$20.000</h6>
               </a>
             </div>
           </div>
@@ -70,11 +74,13 @@
               >Productos</a
             >
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
-            <a class="nav-link me-3 nav-custom" href="nosotros.html">Nosotros</a>
-            <a class="nav-link me-3 nav-custom" href="#">Contacto</a>
             <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
-            <a class="nav-link nav-custom" href="#">Contacto</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="#">Servicios</a>
+            <a class="nav-link me-3 nav-custom" href="nosotros.html"
+              >Nosotros</a
+            >
           </nav>
         </div>
       </div>
@@ -366,7 +372,7 @@
       </div>
       <hr class="my-5" />
 
-      <!-- Carrito -->
+      <!-- Offcanvas -->
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
@@ -384,19 +390,44 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
-          <div class="containe">
-            <div class="row">
-              <div class="col">
-                <img src="imagenes/comic_1.webp" alt="" style="width: 200px; height: 200px;">
-                <p >hola</p>
-              </div>
-              
-              
+        <div class="offcanvas-body d-flex flex-column">
+          <div class="row flex-grow-1">
+            <div class="col-6">
+              <img src="imagenes/comic_1.webp" alt="..." class="img-fluid" />
             </div>
+            <div class="col-6">
+              <h6>BATMAN: VENENO</h6>
+              <p>
+                hola ho la holal. holal hol holaholal hola hola hola<br />
+              </p>
+              <h6>$10.000</h6>
+
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+            <div class="col-6">
+              <img src="imagenes/comic_2.webp" alt="..." class="img-fluid" />
+            </div>
+            <div class="col-6">
+              <h6>BATMAN: La muerte de la familia ...</h6>
+              <p>
+                hola ho la holal. holal hol holaholal hola hola hola<br />
+              </p>
+              <h6>$10.000</h6>
+
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+          <div class="mt-auto">
+            <h5>TOTAL: $20.000</h5>
+            <a href="carrito.html"
+              ><button type="button" class="btn btn-success w-100">
+                Procesar compra
+              </button>
+            </a>
           </div>
         </div>
       </div>
+
       <!-- Modal 1-->
       <div
         class="modal fade"

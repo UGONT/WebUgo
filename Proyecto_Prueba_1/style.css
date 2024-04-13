@@ -57,3 +57,8 @@ footer {
   text-align: center;     
   font-size: 16px;        
 }
+
+.offcanvas-lg {
+  width: 600px;
+
+}
