@@ -11,5 +11,8 @@ function validar(){
     }else{
         document.getElementById("resultado").innerHTML="<div class='alert alert-danger mx-auto'>Usuario no valido</div>"
     }
+}
+
+function validar2(){
     
 }
