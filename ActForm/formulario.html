@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
-<body>
+
+<body style="background-color: rgb(211, 211, 211);">
     <main>
-        <div>
-            <div>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <form action="" class="col-6 mx-auto mt-3 text-center bg-light">
+                    <div class="form-floating w-50 mx-auto mb-3 mt-5">
+                        <h3>Formulario postulacion apoyo ambiental</h3>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3 mt-5">
+                        <input type="text" class="form-control" name="rut" id="rut" placeholder="">
+                        <label for="">Rut: </label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
+                        <label for="">Nombre: </label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="text" class="form-control" name="apellidoPat" id="apellidoPat" placeholder="">
+                        <label for="">Apellido Paterno:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="text" class="form-control" name="apellidoMat" id="apellidoMat" placeholder="">
+                        <label for="">Apellido Materno:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="number" class="form-control" name="edad" id="edad" placeholder="">
+                        <label for="">Edad:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="date" class="form-control" name="fecha" id="fecha" placeholder="">
+                        <label for="">Fecha nacimiento:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <select class="form-select" name=" optGenero" id="optGenero">
+                            <option value="0">Selecione genero</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                        <label for="optRol">Genero:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="text" class="form-control" name="celular" id="celular" placeholder="">
+                        <label for="">Numero celular:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="">
+                        <label for="">Gmail:</label>
+                    </div>
+                    <div class="form-floating w-50 mx-auto mb-3">
+                        <input type="text" class="form-control" name="profesion" id="profesion" placeholder="">
+                        <label for="">Profesion:</label>
+                    </div>
+                    
+                    <textarea class="form-floating w-50 mx-auto mb-3" required style="height: 200px;resize: none;" placeholder="Motivacion:"></textarea>
+                    <div class="w-50 mx-auto mb-3">
+                        <button type="button" id="btnEnviar" class="btn btn-outline-primary" onclick="validarRut()">Ingresar</button>
+                        <button type="button" id="btnGenerar" class="btn btn-outline-success">Generar Carta</button>
+                    </div>
+                </form>
 
             </div>
         </div>
@@ -17,6 +76,8 @@
 
 
     <script src="/js/bootstrap.bundle.min.js"></script>
-    sc
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="validar.js"></script>
 </body>
+
 </html>
