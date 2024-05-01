@@ -1,10 +1,20 @@
+$(document).ready(function () {
+    
+    $("#btnEnviar").click(function () {
+        $("#formulario").submit();
+    })
 
-    function validarRut(){
-        let rut = document.getElementById("rut").value;
-        console.log(rut);
-        if(String(rut).length >=9 && String(rut).length <=10){
-            console.log("bien");
-        };
-    }
-
-
+    $("#btnGenerar").click(function () {
+        let rut = $("#txtRut").val;
+        
+    })
+    
+    function validar(rut){
+        if (String(rut).length < 9 || String(rut).length > 10 ) {
+            
+        }
+        else if (condition) {
+            
+        }
+    };
+})

@@ -13,13 +13,13 @@
         <div class="container-fluid">
             <div class="row">
                 
-                <form action="" class="col-6 mx-auto mt-3 text-center bg-light">
+                <form action="" id="formulario" class="col-6 mx-auto mt-3 text-center bg-light">
                     <div class="form-floating w-50 mx-auto mb-3 mt-5">
                         <h3>Formulario postulacion apoyo ambiental</h3>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-5">
-                        <input type="text" class="form-control" name="rut" id="rut" placeholder="">
-                        <label for="">Rut: </label>
+                        <input type="text" class="form-control" name="txtRut" id="txtRut" placeholder="">
+                        <label for="txtRut">Rut: </label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
@@ -65,9 +65,10 @@
                     
                     <textarea class="form-floating w-50 mx-auto mb-3" required style="height: 200px;resize: none;" placeholder="Motivacion:"></textarea>
                     <div class="w-50 mx-auto mb-3">
-                        <button type="button" id="btnEnviar" class="btn btn-outline-primary" onclick="validarRut()">Ingresar</button>
+                        <button type="button" id="btnEnviar" class="btn btn-outline-primary">Ingresar</button>
                         <button type="button" id="btnGenerar" class="btn btn-outline-success">Generar Carta</button>
                     </div>
+                    
                 </form>
 
             </div>
