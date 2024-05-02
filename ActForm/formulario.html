@@ -22,27 +22,27 @@
                         <label for="txtRut">Rut: </label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
+                        <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="">
                         <label for="">Nombre: </label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="text" class="form-control" name="apellidoPat" id="apellidoPat" placeholder="">
+                        <input type="text" class="form-control" name="txtApellidoPat" id="txtApellidoPat" placeholder="">
                         <label for="">Apellido Paterno:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="text" class="form-control" name="apellidoMat" id="apellidoMat" placeholder="">
+                        <input type="text" class="form-control" name="txtApellidoMat" id="txtApellidoMat" placeholder="">
                         <label for="">Apellido Materno:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="number" class="form-control" name="edad" id="edad" placeholder="">
+                        <input type="number" class="form-control" name="txtEdad" id="txtEdad" placeholder="">
                         <label for="">Edad:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="date" class="form-control" name="fecha" id="fecha" placeholder="">
+                        <input type="date" class="form-control" name="txtFecha" id="txtFecha" placeholder="">
                         <label for="">Fecha nacimiento:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <select class="form-select" name=" optGenero" id="optGenero">
+                        <select class="form-select" name="optGenero" id="optGenero">
                             <option value="0">Selecione genero</option>
                             <option value="1">Masculino</option>
                             <option value="2">Femenino</option>
@@ -51,19 +51,22 @@
                         <label for="optRol">Genero:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="text" class="form-control" name="celular" id="celular" placeholder="">
+                        <input type="text" class="form-control" name="txtCelular" id="txtCelular" placeholder="">
                         <label for="">Numero celular:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="">
+                        <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="">
                         <label for="">Gmail:</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3">
-                        <input type="text" class="form-control" name="profesion" id="profesion" placeholder="">
+                        <input type="text" class="form-control" name="txtProfesion" id="txtProfesion" placeholder="">
                         <label for="">Profesion:</label>
                     </div>
                     
-                    <textarea class="form-floating w-50 mx-auto mb-3" required style="height: 200px;resize: none;" placeholder="Motivacion:"></textarea>
+                    <textarea class="form-floating w-50 mx-auto mb-3" id="txtMotivacion" style="height: 200px;resize: none;" placeholder="Motivacion:"></textarea>
+                    <div id="estado">
+
+                    </div>
                     <div class="w-50 mx-auto mb-3">
                         <button type="button" id="btnEnviar" class="btn btn-outline-primary">Ingresar</button>
                         <button type="button" id="btnGenerar" class="btn btn-outline-success">Generar Carta</button>
