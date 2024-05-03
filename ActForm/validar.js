@@ -13,7 +13,7 @@ $(document).ready(function () {
         let valorSeleccionado = $("#optGenero").val();
         let textoSeleccionado = $("#optGenero").find("option:selected").text();
         let celular = $("#txtCelular").val();
-        console.log(celular);
+        
         let res = validar(rut,nombre,apellidoPat,apellidoMat,edad,valorSeleccionado,celular);
         if(res){
             $("#estado").html("<div class='alert alert-success w-50 mx-auto text-center' >WEna</div>");
