@@ -78,22 +78,25 @@
 
                     <form action="" id="formulario" class="col-6 mx-auto mt-3 text-center bg-light">
                         <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                            <input type="text" class="form-control" name="txtRut" id="txtRut" placeholder="">
-                            <label for="txtRut">Usuario: </label>
+                            <input type="text" class="form-control" name="txtUser" id="txtUser" placeholder="">
+                            <label for="txtUser">Usuario: </label>
                         </div>
                         <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                            <input type="text" class="form-control" name="txtPass" id="txtPass" placeholder="">
+                            <input type="password" class="form-control" name="txtPass" id="txtPass" placeholder="">
                             <label for="txtPass">Contraseña: </label>
                         </div>
                         <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                            <input type="text" class="form-control" name="txtPass" id="txtPass" placeholder="">
-                            <label for="txtPass">Repita Contraseña: </label>
+                            <input type="password" class="form-control" name="txtPass2" id="txtPass2" placeholder="">
+                            <label for="txtPass2">Repita Contraseña: </label>
                         </div>
                         <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                            <input type="text" class="form-control" name="txtEmail" id="txtEmail" placeholder="">
+                            <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="">
                             <label for="txtEmail">Correo: </label>
                         </div>
-                        <button type="submit" class="btn btn-success w-10 mb-3 mt-2">Registrarse</button>
+                        <div id="estado">
+
+                        </div>
+                        <button type="button" id="btnRegistrar" class="btn btn-success w-10 mb-3 mt-2">Registrarse</button>
                     </form>
 
                 </div>
@@ -108,7 +111,9 @@
     <!-- Link JS -->
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js_proyecto/animacion.js"></script>
+    <script src="js_proyecto/validar.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
