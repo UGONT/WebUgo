@@ -63,3 +63,11 @@ footer {
   width: 600px;
 
 }
+
+.fot{
+  text-decoration: none;
+  color: white;
+}
+.fot:hover{
+  color: #bdbdbd;
+}
