@@ -1,4 +1,4 @@
-barba.init({
+/* barba.init({
   transitions: [{
     name: 'fade',
     once(data) {
@@ -20,5 +20,5 @@ barba.init({
       });
     }
   }]
-});
+}); */
 

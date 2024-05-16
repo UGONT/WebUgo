@@ -1,19 +1,19 @@
 body {
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(246, 239, 239);
 }
 /* 1920x683 imagen carrusel */
 .bloque-pequeno {
   height: 30px; 
 }
 .bloque-mediano {
-  height: 110px;
+  height: 170px;
 }
 .bloque-grande {
   height: 75px; 
 }
 #logo {
   height: 140px;
-  width: 210px;
+  width: 160px;
 }
 #carrito {
   height: 35px;
@@ -24,7 +24,7 @@ body {
   color: #f3f2f2;
 }
 .nav-custom:hover {
-  color: #13c0ff;
+  color: #898989;
 }
 
 .precio {
@@ -71,3 +71,13 @@ footer {
 .fot:hover{
   color: #bdbdbd;
 }
+
+#btnVolverArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Ocultar el botón por defecto */
+  z-index: 999; /* Asegurar que esté por encima de otros elementos */
+}
+
+

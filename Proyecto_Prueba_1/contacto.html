@@ -25,7 +25,7 @@
               <!-- Logo -->
               <div class="col-3 text-center">
                 <a href="index.html">
-                  <img id="logo" src="imagenes/images.png" alt="" />
+                  <img id="logo" src="imagenes/logo_pagina.jfif" alt="" />
                 </a>
               </div>
               <!-- Barra de búsqueda -->
@@ -39,7 +39,7 @@
               </div>
               <!-- Botón de inicio de sesión -->
               <div class="col-2 text-center">
-                <button class="btn btn-secondary">Inicio session</button>
+                <a href="session.html"><button class="btn btn-secondary">Inicio session</button></a>
               </div>
               <!-- Carrito -->
               <div class="col-3 text-center d-flex align-items-center justify-content-center">
@@ -72,57 +72,81 @@
         </div>
       </header>
       <main class="container mt-5">
-        <div class="row justify-content-center mx-auto ">
-          <div class="col-md-6">
-            <h1 class="text-center mb-4">Inicio de Sesión</h1>
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingrese Correo electrónico">
-              </div>
-              <div class="mb-5">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Ingrese Contraseña">
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
-              <a href="registro.html"><button type="submit" class="btn btn-secondary w-100 mt-3">Registrarse</button></a>
-            </form>
+        <section id="contacto" class="container">
+          <div class="row">
+            <!-- Información de contacto -->
+            <div class="col-md-6">
+              <h2>Contacto</h2>
+              <p>Para cualquier consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de
+                ayudarte.</p>
+              <ul>
+                <li><strong>Teléfono:</strong> +123456789</li>
+                <li><strong>Email:</strong> super@iendadecomics.com</li>
+                <li><strong>Dirección:</strong> Calle Principal #123, Ciudad</li>
+              </ul>
+            </div>
+            <!-- Formulario de contacto -->
+            <div class="col-md-6">
+              <h2>Envíanos un mensaje</h2>
+              <form action="#" method="POST">
+                <div class="mb-3">
+                  <label for="nombre" >Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" >
+                </div>
+                <div class="mb-3">
+                  <label for="correo" >Correo electrónico:</label>
+                  <input type="email" class="form-control" id="correo" name="correo" >
+                </div>
+                <div class="mb-3">
+                  <label for="asunto" >Asunto:</label>
+                  <input type="text" class="form-control" id="asunto" name="asunto" >
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje:</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" ></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="botonEnviar">Enviar mensaje</button>
+                <div id="estado">
+
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer>
         <div class="container-fluid footer">
           <div class="row">
-              <div class="col-md-4">
-                  <h4>Enlaces Rápidos</h4>
-                  <ul>
-                      <li><a href="#" class="fot">Inicio</a></li>
-                      <li><a href="#" class="fot">Cómics</a></li>
-                      <li><a href="#" class="fot">Ofertas</a></li>
-                      <li><a href="#" class="fot">Productos</a></li>
-                      <li><a href="#" class="fot">Nosotros</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-4">
-                  <h4>Contacto</h4>
-                  
-                  <p>Email: super@iendadecomics.com</p>
-                  <p>Teléfono: +1234567890</p>
-              </div>
-              <div class="col-md-4">
-                  <h4>Síguenos</h4>
-                  <ul class="social">
-                      <li><a href="#" class="fot">@NOMBREDEPAGINA</a></li>
-                      <li><a href="#" class="fot">OTRA RED</a></li>
-                      <li><a href="#" class="fot">NOC</a></li>
-                  </ul>
-              </div>
+            <div class="col-md-4">
+              <h4>Enlaces Rápidos</h4>
+              <ul>
+                <li><a href="index.html" class="fot">Inicio</a></li>
+                <li><a href="productos.html" class="fot">Cómics</a></li>
+                <li><a href="index.html" class="fot">Ofertas</a></li>
+                <li><a href="contacto.html" class="fot">Contacto</a></li>
+                <li><a href="nosotros.html" class="fot">Nosotros</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Contacto</h4>
+
+              <p>Email: super@iendadecomics.com</p>
+              <p>Teléfono: +1234567890</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Síguenos</h4>
+              <ul class="social">
+                <li><a href="#" class="fot">@NOMBREDEPAGINA</a></li>
+                <li><a href="#" class="fot">OTRA RED</a></li>
+                <li><a href="#" class="fot">NOC</a></li>
+              </ul>
+            </div>
           </div>
           <hr>
           <div class="text-center">
-              <p>&copy; 2024 NOMBRE DE MI TIEMDA WAZAA. Todos los derechos reservados.</p>
+            <p>&copy; 2024 NOMBRE DE MI TIEMDA WAZAA. Todos los derechos reservados.</p>
           </div>
-      </div>
+        </div>
       </footer>
     </div>
   </div>
@@ -131,7 +155,9 @@
   <!-- Link JS -->
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js_proyecto/animacion.js"></script>
+  <script src="js_proyecto/validar.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
