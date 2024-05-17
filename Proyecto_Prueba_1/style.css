@@ -1,5 +1,11 @@
 body {
-  background-color: rgb(246, 239, 239);
+  background-color: rgb(255, 255, 255);
+}
+.amarrilo{
+  background-color: orange;
+}
+.verde{
+  background-color: rgb(13, 129, 13);
 }
 /* 1920x683 imagen carrusel */
 .bloque-pequeno {
