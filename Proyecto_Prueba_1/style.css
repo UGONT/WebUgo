@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -78,7 +81,7 @@ footer {
   color: #bdbdbd;
 }
 
-#btnVolverArriba {
+#scrollToTopBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;

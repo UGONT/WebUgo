@@ -1,17 +1,20 @@
+$(document).ready(function () {
 
-window.addEventListener('scroll', function() {
-    var btnVolverArriba = document.getElementById('btnVolverArriba');
-    if (window.scrollY > 100) { 
-      btnVolverArriba.style.display = 'block';
-      
+  /* Epica funcion para ir hacia arriba */
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+    var btnVolverArriba = $("#scrollToTopBtn");
+
+    if (scrollTop > 100) {
+      btnVolverArriba.fadeIn(300);
     } else {
-      btnVolverArriba.style.display = 'none';
+      btnVolverArriba.fadeOut(300);
     }
   });
-
-  document.getElementById('btnVolverArriba').addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  
+  $("#scrollToTopBtn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
+
+
+});
