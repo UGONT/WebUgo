@@ -80,7 +80,7 @@ $(document).ready(function () {
         let pass = $('#pass').val();
         let emailGuardado = localStorage.getItem('email');
         let passGuardada = localStorage.getItem('password');
-        if (email === emailGuardado && pass === passGuardada) {
+        if (email == emailGuardado && pass == passGuardada) {
             $("#estado").html("<div class='alert alert-primary w-50 mx-auto text-center' >Ingresaste correctamente!</div>");
             setTimeout(() => {
                 window.location.href = 'index.html';
