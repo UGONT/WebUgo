@@ -10,7 +10,7 @@
             <div class="row justify-content-center align-items-center">
               <!-- Logo -->
               <div class="col-3 text-center">
-                <a href="index.html">
+                <a href="{% url "index" %}">
                   <img id="logo" src="{% static 'img/logo_pagina.jfif' %} " alt="" />
                 </a>
               </div>
@@ -33,7 +33,7 @@
                   data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                   <img id="carrito" src="{% static 'img/carrito.png' %}" alt="" />
                   <h6 class="mb-0 ms-2">Mi carrito</h6>
-                  <h6 class="mb-0 ms-2" style="color: darkblue">$20.000</h6>
+                  <h6 class="mb-0 ms-2" style="color: darkblue">$0</h6>
                 </a>
               </div>
             </div>
@@ -45,11 +45,13 @@
           <div class="p-2 bloque-grande">
             <!-- Barra de navegación -->
             <nav class="nav justify-content-center">
-              <a class="nav-link active me-5 nav-custom" href="index.html"><h4>Inicio</h4></a>
-              <a class="nav-link me-5 nav-custom" href="productos.html"><h4>Comics</h4></a>
-              <a class="nav-link me-5 nav-custom" href="contacto.html"><h4>Contacto</h4></a>
-              <a class="nav-link me-5 nav-custom" href="nosotros.html"><h4>Nosotros</h4></a>
+              <a class="nav-link active me-5 nav-custom" href="{% url "index" %}"><h4>Inicio</h4></a>
+              <a class="nav-link me-5 nav-custom" href="{% url "comics" %}"><h4>Comics</h4></a>
+              <a class="nav-link me-5 nav-custom" href="{% url "contacto" %}"><h4>Contacto</h4></a>
+              <a class="nav-link me-5 nav-custom" href="{% url "nosotros" %}"><h4>Nosotros</h4></a>
             </nav>
           </div>
         </div>
+
+        <button id="scrollToTopBtn" class="btn btn-floating"><img src="{% static 'img/superman.png'%}" alt="" style="height: 90px;  width: 40px;"></button>
 </header>

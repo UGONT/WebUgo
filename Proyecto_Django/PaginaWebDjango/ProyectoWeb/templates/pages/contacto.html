@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main>
+        
+        <section id="contacto" class="container">
+            <div class="row mt-5">
+              <!-- Información de contacto -->
+              <div class="col-md-6">
+                <h2>Contacto</h2>
+                <p>Para cualquier consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de
+                  ayudarte.</p>
+                <ul>
+                  <li><strong>Teléfono:</strong> +123456789</li>
+                  <li><strong>Email:</strong> super@iendadecomics.com</li>
+                  <li><strong>Dirección:</strong> Calle Principal #123, Ciudad</li>
+                </ul>
+              </div>
+              <!-- Formulario de contacto -->
+              <div class="col-md-6">
+                <h2>Envíanos un mensaje</h2>
+                <form action="{% url 'index' %}" id= "fomulario" method="POST">
+                {% csrf_token %}
+                  <div class="mb-3">
+                    <label for="nombre" >Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="correo" >Correo electrónico:</label>
+                    <input type="email" class="form-control" id="correo" name="correo" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="asunto" >Asunto:</label>
+                    <input type="text" class="form-control" id="asunto" name="asunto" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" ></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="botonEnviar">Enviar mensaje</button>
+                  <div id="estado">
+  
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+
+
+    </main>
+    {% include 'base/footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=" {% static 'js/animacion.js' %}"></script>
+    <script src=" {% static 'js/icono.js' %}"></script>
+    <script src=" {% static 'js/validar.js' %}"></script>
+    <script src=" {% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>

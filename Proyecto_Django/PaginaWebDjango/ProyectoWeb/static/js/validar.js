@@ -51,7 +51,7 @@ $(document).ready(function () {
         if (resultado) {
             $("#estado").html("<div class='alert alert-success w-50 mx-auto text-center' >Mensaje enviado!</div>");
             setTimeout(() => {
-                window.location.href = 'index.html';
+                $('#fomulario').submit()
             }, 1500);
         }
     })

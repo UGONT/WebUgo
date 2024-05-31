@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'base/header.html' %}
+    <main class="container d-flex flex-column justify-content-center mt-5" style="min-height: 100vh">
+        <section id="sobre-nosotros" class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h2>Sobre Nosotros</h2>
+                  <p>Somos una tienda apasionada por los cómics y el mundo de los superhéroes. Nuestra misión es brindar a nuestros clientes una experiencia única al adentrarse en el universo de sus personajes favoritos.</p>
+                  <p>En nuestra tienda, encontrarás una amplia selección de cómics de todas las épocas y géneros, desde clásicos icónicos hasta las últimas novedades. También ofrecemos una variedad de artículos coleccionables, figuras de acción, merchandising y mucho más.</p>
+                  <p>Nuestro equipo está formado por fanáticos apasionados que están siempre dispuestos a ayudarte a encontrar lo que buscas y compartir sus conocimientos sobre el vasto mundo del cómic.</p>
+                  <p>Estamos comprometidos con la calidad, la atención personalizada y la satisfacción de nuestros clientes. ¡Únete a nosotros en esta emocionante aventura!</p>
+              </div>
+              <div class="col-md-6">
+                  <img src="{% static 'img/logo_proto.jfif' %}" alt="Imagen de la tienda" class="img-fluid">
+              </div>
+          </div>
+      </section>
+      </main>
+    {% include 'base/footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=" {% static 'js/animacion.js' %}"></script>
+    <script src=" {% static 'js/icono.js' %}"></script>
+    <script src=" {% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
