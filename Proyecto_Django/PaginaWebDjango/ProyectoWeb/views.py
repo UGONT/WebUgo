@@ -18,3 +18,7 @@ def contacto(request):
 def nosotros(request):
     context = {}
     return render(request, "pages/nosotros.html", context)
+
+def sesion(request):
+    context = {}
+    return render(request, "pages/inicioSesion.html", context)

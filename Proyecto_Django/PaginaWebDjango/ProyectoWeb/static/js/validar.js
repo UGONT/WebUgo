@@ -51,7 +51,7 @@ $(document).ready(function () {
         if (resultado) {
             $("#estado").html("<div class='alert alert-success w-50 mx-auto text-center' >Mensaje enviado!</div>");
             setTimeout(() => {
-                $('#fomulario').submit()
+                $("#fomulario").submit()
             }, 1500);
         }
     })
@@ -83,14 +83,14 @@ $(document).ready(function () {
         if (email == emailGuardado && pass == passGuardada) {
             $("#estado").html("<div class='alert alert-primary w-50 mx-auto text-center' >Ingresaste correctamente!</div>");
             setTimeout(() => {
-                window.location.href = 'index.html';
+                $("formulario").submit()
             }, 1500);
 
         } else {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >Correo o contraseña incorrectos.</div>");
-            setTimeout(() => {
-                window.location.href = 'session.html';
-            }, 1500);
+            /* setTimeout(() => {
+                $("formulario").submit()
+            }, 1500); */
             
         }
     })
