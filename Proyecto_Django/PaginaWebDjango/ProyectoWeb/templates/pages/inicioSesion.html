@@ -11,14 +11,13 @@
 <body>
     {% include 'base/header.html' %}
 
-    
-    
     <main>
         <div class="container mt-5">
             <div class="row justify-content-center mx-auto ">
             <div class="col-md-6">
                 <h1 class="text-center mb-4">Inicio de Sesión</h1>
                 <form action="{% url 'index' %}" id="fomulario" method="POST">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" placeholder="Ingrese Correo electrónico">
