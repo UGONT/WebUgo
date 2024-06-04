@@ -22,3 +22,7 @@ def nosotros(request):
 def sesion(request):
     context = {}
     return render(request, "pages/inicioSesion.html", context)
+
+def registro(request):
+    context = {}
+    return render(request, "pages/registrarSesion.html", context)

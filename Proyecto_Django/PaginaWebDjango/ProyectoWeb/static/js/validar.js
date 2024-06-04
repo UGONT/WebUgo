@@ -14,7 +14,7 @@ $(document).ready(function () {
             localStorage.setItem('password', pass);
             $("#estado").html("<div class='alert alert-success w-50 mx-auto text-center' >Registro exitoso!</div>");
             setTimeout(() => {
-                window.location.href = 'session.html';
+                $("#fomulario").submit()
             }, 1500);
 
         }
