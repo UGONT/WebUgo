@@ -10,11 +10,10 @@ $(document).ready(function () {
         console.log(user);
         let resultado = validacionUser(user, pass, pass2, email);
         if (resultado) {
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', pass);
+
             $("#estado").html("<div class='alert alert-success w-50 mx-auto text-center' >Registro exitoso!</div>");
             setTimeout(() => {
-                $("#fomulario").submit()
+                $("#formularioReg").submit()
             }, 1500);
 
         }
@@ -83,7 +82,7 @@ $(document).ready(function () {
         if (email == emailGuardado && pass == passGuardada) {
             $("#estado").html("<div class='alert alert-primary w-50 mx-auto text-center' >Ingresaste correctamente!</div>");
             setTimeout(() => {
-                $("formulario").submit()
+                $("#formularioIni").submit()
             }, 1500);
 
         } else {
