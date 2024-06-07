@@ -40,6 +40,8 @@ class Comic(models.Model):
     formato = models.CharField(max_length=50, null=False, blank=False)
     disponible = models.IntegerField(null=False, blank=False)
     edi_original = models.TextField(null=False, blank=False)
+    isbn = models.CharField(max_length=20, null=True, blank=False )
+    ruta_img = models.CharField(max_length=35, null=True, blank=False)
 
     def __str__(self):
         return (

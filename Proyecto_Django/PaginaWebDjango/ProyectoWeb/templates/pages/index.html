@@ -62,7 +62,7 @@
             {% for tmp in comics %}
             <div class="col"> <!-- Comic 1 -->
               <div class="p-3 bg-light border rounded">
-                <img src="{% static 'img/comic_1.webp' %}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
+                <img src="{% static 'img/' %}{{ tmp.ruta_img }}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
                   data-bs-target="#Modal_1" />
                 <p class="text-center">{{tmp.titulo}}</p>
                 <p class="text-center precio">${{tmp.precio}}</p>
