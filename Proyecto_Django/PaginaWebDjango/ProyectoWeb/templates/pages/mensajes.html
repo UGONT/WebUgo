@@ -26,27 +26,24 @@
                         </thead>
                         <tbody>
                             {% if mensajes %}
-                            {% for tmp in mensajes%}
+                            {% for tmp in mensajes %}
                             <tr>
                                 <td>{{tmp.id_mensaje}}</td>
                                 <td>{{tmp.nombre}}</td>
                                 <td>{{tmp.email}}</td>
                                 <td>{{tmp.asunto}}</td>
                                 <td>{{tmp.mensaje}}</td>
-                                <td><a href=""><button class="btn btn-danger">Eliminar</button></a></td>
+                                <td><a href="{% url 'mensaje_del' pk=tmp.id_mensaje %}"><button class="btn btn-danger">Eliminar</button></a></td>
                             </tr>
                             {% endfor%}
                             {% endif %}
                         </tbody>
                     </table>
-                    {% comment %} {% if mensaje%}
+                    {% if mensaje %}
                     <div class="alert alert-info w-50 mx-auto">
                         {{mensaje}}
                     </div>
-                    {% endif %} {% endcomment %}
-                    {% comment %} <a href="{% url 'user_add' %}">
-                        <button class="btn btn-primary">Agregar Registro</button>
-                    </a> {% endcomment %}
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from .models import Mensaje
+from .models import Mensaje,Comic
 
 # Create your views here.
 
 def index(request):
-    """context: paquete variables que pueden ser consumidas por el front"""
-    context = {}
+    comics = Comic.objects.all()
+    context = {
+        'comics' : comics
+    }
     return render(request, "pages/index.html", context)
 
 def comics(request):
@@ -15,13 +17,11 @@ def comics(request):
 def contacto(request):
 
     if request.method != "POST":
-
         context = {      
         }
         return render(request, "pages/contacto.html", context)
     
     else:
-
         nombre = request.POST["nombre"]
         email = request.POST["correo"]
         asunto = request.POST["asunto"]
@@ -57,3 +57,23 @@ def mensajes(request):
         'mensajes': mensajes
     }
     return render(request, "pages/mensajes.html", context)
+
+def mensaje_del(request, pk):
+    try:
+        mensaje = Mensaje.objects.get(id_mensaje = pk)
+        mensaje.delete()
+        mensajes = Mensaje.objects.all()
+        context = {
+            'mensaje' : "Eliminado con exito",
+            'mensajes': mensajes, 
+        }
+        return render(request, "pages/mensajes.html", context)
+
+    except:
+        mensajes = Mensaje.objects.all()
+        context = {
+            'mensaje' : "Error al eliminar el mensaje",
+            'mensajes': mensajes, 
+        }
+        
+        return render(request, "pages/mensajes.html", context)

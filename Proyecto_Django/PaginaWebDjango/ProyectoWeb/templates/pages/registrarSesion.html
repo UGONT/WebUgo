@@ -18,6 +18,10 @@
             {% csrf_token %}
             <h1 class="text-center mb-5 mt-5">Registrarse</h1>
             <div class="form-floating w-50 mx-auto mb-3 mt-3">
+              <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="" />
+              <label for="txtEmail">Correo:</label>
+            </div>
+            <div class="form-floating w-50 mx-auto mb-3 mt-3">
               <input type="text" class="form-control" name="txtUser" id="txtUser" placeholder="" />
               <label for="txtUser">Usuario:</label>
             </div>
@@ -29,10 +33,7 @@
               <input type="password" class="form-control" name="txtPass2" id="txtPass2" placeholder="" />
               <label for="txtPass2">Repita Contraseña:</label>
             </div>
-            <div class="form-floating w-50 mx-auto mb-3 mt-3">
-              <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="" />
-              <label for="txtEmail">Correo:</label>
-            </div>
+            
             <div id="estado"></div>
             <button type="button" id="btnRegistrar" class="btn btn-success w-50 mb-5 mt-2">Registrarse</button>
           </form>

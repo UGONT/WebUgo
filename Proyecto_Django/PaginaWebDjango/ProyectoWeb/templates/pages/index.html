@@ -55,12 +55,17 @@
         <!-- Contenedores -->
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <!-- SE REPITE -->
+
+            {% if comics %}
+            {% for tmp in comics %}
             <div class="col"> <!-- Comic 1 -->
               <div class="p-3 bg-light border rounded">
                 <img src="{% static 'img/comic_1.webp' %}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
                   data-bs-target="#Modal_1" />
-                <p class="text-center">BATMAN: <br />VENENO</p>
-                <p class="text-center precio">$10.000</p>
+                <p class="text-center">{{tmp.titulo}}</p>
+                <p class="text-center precio">${{tmp.precio}}</p>
                 <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
                   <button class="btn btn-outline-secondary menos">-</button>
                   <span class="num mx-2">1</span>
@@ -71,7 +76,11 @@
                 </div>
               </div>
             </div>
-            <div class="col"> <!-- Comic 2 -->
+            {% endfor %}
+            {% endif %}
+
+            <!-- HASTA AQUI -->
+            {% comment %} <div class="col"> <!-- Comic 2 -->
               <div class="p-3 bg-light border rounded">
                 <img src="{% static 'img/comic_2.webp' %}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
                   data-bs-target="#Modal_2" />
@@ -88,39 +97,8 @@
                   </button>
                 </div>
               </div>
-            </div>
-            <div class="col"> <!-- Comic 3 -->
-              <div class="p-3 bg-light border rounded">
-                <img src="{% static 'img/comic_3.webp' %} " alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
-                  data-bs-target="#Modal_3" />
-                <p class="text-center">BATMAN:<br />RESPALDO</p>
-                <p class="text-center precio">$10.000</p>
-                <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                  <button class="btn btn-outline-secondary menos">-</button>
-                  <span class="num mx-2">1</span>
-                  <button class="btn btn-outline-secondary mas">+</button>
-                  <button class="btn btn-outline-success ml-2" type="button">
-                    Agregar
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col"> <!-- Comic 4 -->
-              <div class="p-3 bg-light border rounded">
-                <img src="{% static 'img/comic_4.webp' %} " alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
-                  data-bs-target="#Modal_4" />
-                <p class="text-center">Batman: La Broma Asesina (Grandes...)</p>
-                <p class="text-center precio">$10.000</p>
-                <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                  <button class="btn btn-outline-secondary menos">-</button>
-                  <span class="num mx-2">1</span>
-                  <button class="btn btn-outline-secondary mas">+</button>
-                  <button class="btn btn-outline-success ml-2" type="button">
-                    Agregar
-                  </button>
-                </div>
-              </div>
-            </div>
+            </div> {% endcomment %}
+            
 
             <!-- Offcanvas -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
