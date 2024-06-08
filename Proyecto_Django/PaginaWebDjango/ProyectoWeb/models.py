@@ -5,9 +5,9 @@ class Mensaje(models.Model):
     id_mensaje = models.AutoField(primary_key=True, db_column='idMensaje')
     nombre = models.CharField(max_length=14)
     email = models.EmailField(max_length=100, unique=False, blank=False, null=False)
-    asunto = models.CharField(max_length=30)
-    mensaje = models.CharField(max_length=200)
-    """ agregar null=False asunto y mensaje """
+    asunto = models.CharField(max_length=30, null=False)
+    mensaje = models.CharField(max_length=200, null=False)
+    
     def __str__(self):
         return (
             str(self.nombre)
@@ -40,7 +40,7 @@ class Comic(models.Model):
     formato = models.CharField(max_length=50, null=False, blank=False)
     disponible = models.IntegerField(null=False, blank=False)
     edi_original = models.TextField(null=False, blank=False)
-    isbn = models.CharField(max_length=20, null=True, blank=False )
+    isbn = models.CharField(max_length=20, null=True, blank=False, unique=True )
     ruta_img = models.CharField(max_length=35, null=True, blank=False)
 
     def __str__(self):

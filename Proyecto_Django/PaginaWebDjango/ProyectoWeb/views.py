@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Mensaje,Comic
+from .forms import SubirExcel
+import pandas as pd
 
 # Create your views here.
 
@@ -77,3 +79,50 @@ def mensaje_del(request, pk):
         }
         
         return render(request, "pages/mensajes.html", context)
+    
+def subirComics(request):
+
+    if request.method != "POST":
+        context = {      
+        }
+        return render(request, "pages/subirComics.html", context)
+    
+    else:
+
+        editorial = request.POST.get('editorial')
+        titulo = request.POST.get('titulo')
+        precio = request.POST.get('precio')
+        autores = request.POST.get('autores')
+        idioma = request.POST.get('idioma')
+        descripcion = request.POST.get('descripcion')
+        formato = request.POST.get('formato')
+        disponibles = request.POST.get('disponibles')
+        editorial_original = request.POST.get('editorial_original')
+        isbn = request.POST.get('isbn')
+        ruta_imagen = request.POST.get('ruta_imagen')
+
+        obj = Comic.objects.create(
+
+            editorial = editorial,
+            titulo = titulo,
+            precio = precio,
+            autor = autores,
+            idioma = idioma,
+            descripcion = descripcion,
+            formato = formato,
+            disponible = disponibles,
+            edi_original = editorial_original,
+            isbn = isbn,
+            ruta_img = ruta_imagen,
+
+        )
+        obj.save
+        context = {
+            "mensaje": "Registro Exitoso",
+        }
+        context = {}
+        return render(request, "pages/subirComics.html", context)
+    
+
+def subirExcel(request):
+    return

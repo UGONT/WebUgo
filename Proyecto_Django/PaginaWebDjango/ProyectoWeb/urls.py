@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 """ path('nombreURL',funcionVista,nombreDePagina) """
 urlpatterns = [
     path('', views.index, name='index'),
@@ -11,4 +12,6 @@ urlpatterns = [
     path('registro', views.registro, name='registro'),
     path('mensajes', views.mensajes, name='mensajes'),
     path('mensaje_del/<str:pk>', views.mensaje_del, name='mensaje_del'),
+    path('subirComics', views.subirComics, name='subirComics'),
+    path('subirComics', views.SubirExcel, name='subirComics'),
 ]
