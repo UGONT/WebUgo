@@ -61,13 +61,13 @@ $(document).ready(function () {
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (String(nombre).length < 3 || String(nombre).length > 14) {
-            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >El nombre debe ser entre 3 y 14 caracteres.</div>");
+            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center mt-4' >El nombre debe ser entre 3 y 14 caracteres.</div>");
         } else if (!emailPattern.test(email)) {
-            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >El correo no es valido.</div>");
+            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center mt-4' >El correo no es valido.</div>");
         } else if (String(asunto).length < 20 || String(asunto).length > 30) {
-            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >Asunto con muy pocos caracteres. (+20)</div>");
+            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center mt-4' >Asunto con muy pocos caracteres. (+20)</div>");
         } else if (String(mensaje).length < 20 || String(mensaje).length > 200) {
-            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >Mensaje con muy pocos caracteres. (+20)</div>");
+            $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center mt-4' >Mensaje con muy pocos caracteres. (+20)</div>");
         } else {
             return true;
         }

@@ -13,5 +13,5 @@ urlpatterns = [
     path('mensajes', views.mensajes, name='mensajes'),
     path('mensaje_del/<str:pk>', views.mensaje_del, name='mensaje_del'),
     path('subirComics', views.subirComics, name='subirComics'),
-    path('subirComics', views.SubirExcel, name='subirComics'),
+    path('verComic/<str:pk>', views.verComic, name='verComic'),
 ]

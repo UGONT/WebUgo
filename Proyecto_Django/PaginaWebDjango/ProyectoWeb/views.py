@@ -124,5 +124,11 @@ def subirComics(request):
         return render(request, "pages/subirComics.html", context)
     
 
-def subirExcel(request):
-    return
+def verComic(request, pk):
+
+    comic = Comic.objects.get(id_comic = pk)
+
+    context = {
+        'comic' : comic,
+    }
+    return render(request, "pages/vistaComic.html", context)

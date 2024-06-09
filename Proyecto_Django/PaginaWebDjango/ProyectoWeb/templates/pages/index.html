@@ -11,7 +11,15 @@
 <body>
     {% include 'base/header.html' %}
     <main>
-        
+        <style>
+          .img-hover-zoom {
+            transition: transform 0.3s ease-in-out;
+          }
+          
+          .img-hover-zoom:hover {
+            transform: scale(1.05);
+          }
+        </style>
 
         <!-- Inicio Carrusel -->
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -62,8 +70,8 @@
             {% for tmp in comics %}
             <div class="col"> <!-- Comic 1 -->
               <div class="p-3 bg-light border rounded">
-                <img src="{% static 'img/' %}{{ tmp.ruta_img }}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
-                  data-bs-target="#Modal_1" />
+                <a href="{% url 'verComic' pk=tmp.id_comic %}"><img src="{% static 'img/' %}{{ tmp.ruta_img }}" alt="" class="img-fluid m-2 mx-auto d-block img-hover-zoom" data-bs-toggle="modal"
+                  data-bs-target="#Modal_1" /></a>
                 <p class="text-center">{{tmp.titulo}}</p>
                 <p class="text-center precio">${{tmp.precio}}</p>
                 <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
@@ -80,27 +88,8 @@
             {% endif %}
 
             <!-- HASTA AQUI -->
-            {% comment %} <div class="col"> <!-- Comic 2 -->
-              <div class="p-3 bg-light border rounded">
-                <img src="{% static 'img/comic_2.webp' %}" alt="" class="img-fluid m-2 mx-auto d-block" data-bs-toggle="modal"
-                  data-bs-target="#Modal_2" />
-                <p class="text-center">
-                  Batman: La muerte de <br />la familia ...
-                </p>
-                <p class="text-center precio">$10.000</p>
-                <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                  <button class="btn btn-outline-secondary menos">-</button>
-                  <span class="num mx-2">1</span>
-                  <button class="btn btn-outline-secondary mas">+</button>
-                  <button class="btn btn-outline-success ml-2" type="button">
-                    Agregar
-                  </button>
-                </div>
-              </div>
-            </div> {% endcomment %}
-            
-
-            <!-- Offcanvas -->
+           
+            <!-- Offcanvas Carrito-->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">
@@ -110,40 +99,30 @@
             </div>
             <div class="offcanvas-body d-flex flex-column">
                 <div class="row flex-grow-1">
-                <div class="col-6">
-                    <img src="{% static 'img/comic_1.webp' %}" alt="..." class="img-fluid" />
-                </div>
-                <div class="col-6">
-                    <h6>BATMAN: VENENO</h6>
-                    <p>
-                    hola ho la holal. holal hol holaholal hola hola hola lore<br />
-                    </p>
-                    <h6>$10.000</h6>
+                  <div class="col-6">
+                      <img src="{% static 'img/comic_1.webp' %}" alt="..." class="img-fluid" />
+                  </div>
+                  <div class="col-6">
+                      <h6>BATMAN: VENENO</h6>
+                      <p>
+                      hola ho la holal. holal hol holaholal hola hola hola lore<br />
+                      </p>
+                      <h6>$10.000</h6>
 
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
-                <div class="col-6">
-                    <img src="{% static 'img/comic_2.webp' %}" alt="..." class="img-fluid" />
-                </div>
-                <div class="col-6">
-                    <h6>BATMAN: La muerte de la familia ...</h6>
-                    <p>
-                    hola ho la holal. holal hol holaholal hola hola hola<br />
-                    </p>
-                    <h6>$10.000</h6>
-
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
+                      <button type="button" class="btn btn-danger">Eliminar</button>
+                  </div>
+                  
                 </div>
                 <div class="mt-auto">
-                <h5>TOTAL: $20.000</h5>
-                <a href="carrito.html"><button type="button" class="btn btn-success w-100">
-                    Procesar compra
-                    </button>
-                </a>
+                  <h5>TOTAL: $0</h5>
+                  <a href="carrito.html"><button type="button" class="btn btn-success w-100">
+                      Procesar compra
+                      </button>
+                  </a>
                 </div>
             </div>
             </div>
+
     </main>
     {% include 'base/footer.html' %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
