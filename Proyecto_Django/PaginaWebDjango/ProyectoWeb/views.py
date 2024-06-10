@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Mensaje,Comic
-from .forms import SubirExcel
 import pandas as pd
 
 # Create your views here.
@@ -13,7 +12,10 @@ def index(request):
     return render(request, "pages/index.html", context)
 
 def comics(request):
-    context = {}
+    comics = Comic.objects.all()
+    context = {
+        'comics' : comics
+    }
     return render(request, "pages/comics.html", context)
 
 def contacto(request):
@@ -87,6 +89,30 @@ def subirComics(request):
         }
         return render(request, "pages/subirComics.html", context)
     
+    elif 'file' in request.FILES:
+        excel_file = request.FILES['file']
+        df = pd.read_excel(excel_file, engine='openpyxl')
+
+        for index, row in df.iterrows():
+                obj = Comic.objects.create(
+                    editorial=row['Editorial'],
+                    titulo=row['Titulo'],
+                    precio=row['Precio'],
+                    autor=row['Autor(es)'],
+                    idioma=row['Idioma'],
+                    descripcion=row['Descripción'],
+                    formato=row['Formato'],
+                    disponible=row['Cantidad'],
+                    edi_original=row['Edición original'],
+                    isbn=row['ISBN'],
+                    ruta_img=row['Ruta']
+                    )
+                obj.save()
+        context = {
+            'mensaje': "Registro exitoso",
+        }
+        return render(request, "pages/subirComics.html", context)
+
     else:
 
         editorial = request.POST.get('editorial')

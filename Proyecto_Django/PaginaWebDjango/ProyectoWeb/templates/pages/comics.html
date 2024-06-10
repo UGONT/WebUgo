@@ -12,72 +12,67 @@
     {% include 'base/header.html' %}
     <main>
         
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              <div class="col mt-5">
-                <div class="p-3 bg-light border rounded">
-                  <img src="{% static "img/comic_1.webp" %}"alt="" class="img-fluid m-2 mx-auto d-block" />
-                  <p class="text-center">BATMAN: <br />VENENO</p>
-                  <p class="text-center precio">$10.000</p>
-                  <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                    <button class="btn btn-outline-secondary menos">-</button>
-                    <span class="num mx-2">1</span>
-                    <button class="btn btn-outline-secondary mas">+</button>
-                    <button class="btn btn-outline-success ml-2" type="button">
-                      Agregar
-                    </button>
-                  </div>
-                </div>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+          <!-- SE REPITE -->
+
+          {% if comics %}
+          {% for tmp in comics %}
+          <div class="col"> <!-- Comic 1 -->
+            <div class="p-3 bg-light border rounded">
+              <a href="{% url 'verComic' pk=tmp.id_comic %}"><img src="{% static 'img/' %}{{ tmp.ruta_img }}" alt="" class="img-fluid m-2 mx-auto d-block img-hover-zoom" data-bs-toggle="modal"
+                data-bs-target="#Modal_1" /></a>
+              <p class="text-center">{{tmp.titulo}}</p>
+              <p class="text-center precio">${{tmp.precio}}</p>
+              <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
+                <button class="btn btn-outline-secondary menos">-</button>
+                <span class="num mx-2">1</span>
+                <button class="btn btn-outline-secondary mas">+</button>
+                <button class="btn btn-outline-success ml-2" type="button">
+                  Agregar
+                </button>
               </div>
-              <div class="col mt-5">
-                <div class="p-3 bg-light border rounded">
-                  <img src="{% static "img/comic_2.webp" %}" alt="" class="img-fluid m-2 mx-auto d-block" />
-                  <p class="text-center">
-                    Batman: La muerte de <br />la familia ...
-                  </p>
-                  <p class="text-center precio">$10.000</p>
-                  <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                    <button class="btn btn-outline-secondary menos">-</button>
-                    <span class="num mx-2">1</span>
-                    <button class="btn btn-outline-secondary mas">+</button>
-                    <button class="btn btn-outline-success ml-2" type="button">
-                      Agregar
-                    </button>
-                  </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endif %}
+
+          <!-- HASTA AQUI -->
+         
+          <!-- Offcanvas Carrito-->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">
+              Resumen Carrito
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+              <div class="row flex-grow-1">
+                <div class="col-6">
+                    <img src="{% static 'img/comic_1.webp' %}" alt="..." class="img-fluid" />
                 </div>
-              </div>
-              <div class="col mt-5">
-                <div class="p-3 bg-light border rounded">
-                  <img src="{% static "img/comic_3.webp" %}" alt="" class="img-fluid m-2 mx-auto d-block" />
-                  <p class="text-center">BATMAN:<br />RESPALDO</p>
-                  <p class="text-center precio">$10.000</p>
-                  <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                    <button class="btn btn-outline-secondary menos">-</button>
-                    <span class="num mx-2">1</span>
-                    <button class="btn btn-outline-secondary mas">+</button>
-                    <button class="btn btn-outline-success ml-2" type="button">
-                      Agregar
-                    </button>
-                  </div>
+                <div class="col-6">
+                    <h6>BATMAN: VENENO</h6>
+                    <p>
+                    hola ho la holal. holal hol holaholal hola hola hola lore<br />
+                    </p>
+                    <h6>$10.000</h6>
+
+                    <button type="button" class="btn btn-danger">Eliminar</button>
                 </div>
+                
               </div>
-              <div class="col mt-5">
-                <div class="p-3 bg-light border rounded">
-                  <img src="{% static "img/comic_4.webp" %}" alt="" class="img-fluid m-2 mx-auto d-block" />
-                  <p class="text-center">
-                    Batman: La Broma Asesina <br />(Grandes...)
-                  </p>
-                  <p class="text-center precio">$10.000</p>
-                  <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                    <button class="btn btn-outline-secondary menos">-</button>
-                    <span class="num mx-2">1</span>
-                    <button class="btn btn-outline-secondary mas">+</button>
-                    <button class="btn btn-outline-success ml-2" type="button">
-                      Agregar
+              <div class="mt-auto">
+                <h5>TOTAL: $0</h5>
+                <a href="carrito.html"><button type="button" class="btn btn-success w-100">
+                    Procesar compra
                     </button>
-                  </div>
-                </div>
+                </a>
               </div>
+          </div>
+          </div>
 
 
 
