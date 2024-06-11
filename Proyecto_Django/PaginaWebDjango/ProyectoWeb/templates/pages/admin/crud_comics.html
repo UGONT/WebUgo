@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mensajes</title>
+    <title>Comics</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -12,7 +12,10 @@
     <main>
       <div class="container-fluid">
         <div class="row shadow-lg mx-auto text-center p-3">
-          <h2 class="my-3">Lista Comics</h2>
+          <div>
+            <h2 class="my-3">Lista Comics</h2>
+            <a href="{% url "subirComics" %}"><button class="btn btn-success mb-3">Agregar Comic</button></a>
+          </div>
           <table class="table table-dark table-hover table-bordered">
             <thead>
               <th>ID</th>

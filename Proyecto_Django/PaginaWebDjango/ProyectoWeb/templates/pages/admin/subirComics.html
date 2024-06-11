@@ -71,7 +71,8 @@
                             <label for="ruta_imagen">Ruta de Imagen</label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary w-25 mb-5 mt-2">Registrar Cómic</button>
+                        <button type="submit" class="btn btn-success w-25 mb-5 mt-2">Registrar Cómic</button>
+                        <a href="{% url "crudComics" %}"><button type="button" class="btn btn-secondary w-25 mb-5 mt-2">Volver</button></a>
                     </form>
     
                     <form id="excelForm" method="post" enctype="multipart/form-data" class="mt-3" style="display: none;">
@@ -80,7 +81,8 @@
                             <input type="file" class="form-control" id="file" name="file" required>
                             <label for="file">Selecciona un archivo Excel</label>
                         </div>
-                        <button type="submit" class="btn btn-primary w-25 mb-5 mt-2">Subir Archivo</button>
+                        <button type="submit" class="btn btn-success w-25 mb-5 mt-2">Subir Archivo</button>
+                        <a href="{% url "crudComics" %}"><button type="button" class="btn btn-secondary w-25 mb-5 mt-2">Volver</button></a>
                     </form>
                 </div>        
             </div>

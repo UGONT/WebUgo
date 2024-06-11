@@ -108,6 +108,7 @@ def subirComics(request):
                     ruta_img=row['Ruta']
                     )
                 obj.save()
+
         context = {
             'mensaje': "Registro exitoso",
         }
