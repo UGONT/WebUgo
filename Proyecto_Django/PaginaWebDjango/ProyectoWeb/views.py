@@ -3,7 +3,7 @@ from .models import Mensaje,Comic
 import pandas as pd
 
 # Create your views here.
-
+# pip install pandas, openpyxl
 def index(request):
     comics = Comic.objects.all()
     context = {
@@ -60,7 +60,7 @@ def mensajes(request):
     context = {
         'mensajes': mensajes
     }
-    return render(request, "pages/mensajes.html", context)
+    return render(request, "pages/admin/mensajes.html", context)
 
 def mensaje_del(request, pk):
     try:
@@ -71,7 +71,7 @@ def mensaje_del(request, pk):
             'mensaje' : "Eliminado con exito",
             'mensajes': mensajes, 
         }
-        return render(request, "pages/mensajes.html", context)
+        return render(request, "pages/admin/mensajes.html", context)
 
     except:
         mensajes = Mensaje.objects.all()
@@ -80,14 +80,14 @@ def mensaje_del(request, pk):
             'mensajes': mensajes, 
         }
         
-        return render(request, "pages/mensajes.html", context)
+        return render(request, "pages/admin/mensajes.html", context)
     
 def subirComics(request):
 
     if request.method != "POST":
         context = {      
         }
-        return render(request, "pages/subirComics.html", context)
+        return render(request, "pages/admin/subirComics.html", context)
     
     elif 'file' in request.FILES:
         excel_file = request.FILES['file']
@@ -111,7 +111,7 @@ def subirComics(request):
         context = {
             'mensaje': "Registro exitoso",
         }
-        return render(request, "pages/subirComics.html", context)
+        return render(request, "pages/admin/subirComics.html", context)
 
     else:
 
@@ -158,3 +158,30 @@ def verComic(request, pk):
         'comic' : comic,
     }
     return render(request, "pages/vistaComic.html", context)
+
+def crudComics(request):
+    comics = Comic.objects.all()
+    context = {
+        'comics': comics
+    }
+    return render(request, "pages/admin/crud_comics.html", context)
+
+def comic_del(request, pk):
+    try:
+        comic = Comic.objects.get(id_comic = pk)
+        comic.delete()
+        comics = Comic.objects.all()
+        context = {
+            'mensaje' : "Eliminado con exito",
+            'comics': comics, 
+        }
+        return render(request, "pages/admin/crud_comics.html", context)
+
+    except:
+        comics = Comic.objects.all()
+        context = {
+            'mensaje' : "Error al eliminar el comic",
+            'comics': comics, 
+        }
+        
+        return render(request, "pages/admin/crud_comics.html", context)

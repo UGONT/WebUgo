@@ -12,6 +12,8 @@ urlpatterns = [
     path('registro', views.registro, name='registro'),
     path('mensajes', views.mensajes, name='mensajes'),
     path('mensaje_del/<str:pk>', views.mensaje_del, name='mensaje_del'),
+    path('comic_del/<str:pk>', views.comic_del, name='comic_del'),
     path('subirComics', views.subirComics, name='subirComics'),
     path('verComic/<str:pk>', views.verComic, name='verComic'),
+    path('crudComics', views.crudComics, name='crudComics'),
 ]
