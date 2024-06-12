@@ -20,10 +20,9 @@ body {
 .bloque-grande {
   height: 75px; 
 }
-
 #logo {
-  height: 140px;
-  width: 160px;
+  height: 120px;
+  width: 120px;
 }
 #carrito {
   height: 35px;
