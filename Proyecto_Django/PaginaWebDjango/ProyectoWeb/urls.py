@@ -15,5 +15,6 @@ urlpatterns = [
     path('comic_del/<str:pk>', views.comic_del, name='comic_del'),
     path('subirComics', views.subirComics, name='subirComics'),
     path('verComic/<str:pk>', views.verComic, name='verComic'),
+    path('comic_edit/<str:pk>', views.comic_edit, name='comic_edit'),
     path('crudComics', views.crudComics, name='crudComics'),
 ]

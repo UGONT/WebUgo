@@ -40,7 +40,7 @@
                     <td>{{ tmp.disponible }}</td>                  
                     <td>{{ tmp.isbn }}</td>
                     <th>
-                        <a href="#"><button class="btn btn-warning" type="button">Modificar</button></a>    
+                        <a href="{% url "comic_edit" pk=tmp.id_comic %}"><button class="btn btn-warning" type="button">Modificar</button></a>    
                     </th>
                     <th>
                         <a href="{% url "comic_del" pk=tmp.id_comic %}"><button class="btn btn-danger" type="button">Eliminar</button></a>    

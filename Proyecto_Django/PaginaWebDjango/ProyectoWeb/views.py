@@ -186,3 +186,11 @@ def comic_del(request, pk):
         }
         
         return render(request, "pages/admin/crud_comics.html", context)
+    
+def comic_edit(request, pk):
+
+    comic = Comic.objects.get(id_comic = pk)
+    context = {
+        'comic':comic,
+    }
+    return render(request, "pages/admin/editComic.html", context)
