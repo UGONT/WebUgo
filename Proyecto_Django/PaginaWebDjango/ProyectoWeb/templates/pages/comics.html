@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <style>
+      .img-hover-zoom {
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .img-hover-zoom:hover {
+        transform: scale(1.05);
+      }
+    </style>
     {% include 'base/header.html' %}
     <main>
         
       <div class="container">
+        <h1 class="text-center mt-4 mb-4"><strong>Nuestros Comics</strong></h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-
+          
           <!-- SE REPITE -->
 
           {% if comics %}
@@ -26,10 +36,10 @@
               <p class="text-center">{{tmp.titulo}}</p>
               <p class="text-center precio">${{tmp.precio}}</p>
               <div class="quantity-controls text-center d-flex justify-content-center align-items-center">
-                <button class="btn btn-outline-secondary menos">-</button>
+                <button class="btn btn-outline-danger menos">-</button>
                 <span class="num mx-2">1</span>
-                <button class="btn btn-outline-secondary mas">+</button>
-                <button class="btn btn-outline-success ml-2" type="button">
+                <button class="btn btn-outline-success mas">+</button>
+                <button class="btn btn-outline-success ml-2 m-2" type="button">
                   Agregar
                 </button>
               </div>

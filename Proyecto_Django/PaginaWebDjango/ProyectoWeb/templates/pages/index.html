@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <style>
+      .img-hover-zoom {
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .img-hover-zoom:hover {
+        transform: scale(1.05);
+      }
+    </style>
     {% include 'base/header.html' %}
     <main>
-        <style>
-          .img-hover-zoom {
-            transition: transform 0.3s ease-in-out;
-          }
-          
-          .img-hover-zoom:hover {
-            transform: scale(1.05);
-          }
-        </style>
+        
 
         <!-- Inicio Carrusel -->
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -59,7 +60,7 @@
           </button>
         </div>
         <!-- Fin Carrusel -->
-        <h2 class="text-center mt-4 mb-4">Nuestros productos</h2>
+        <h2 class="text-center mt-4 mb-4"><strong>Nuestros productos</strong></h2>
         <!-- Contenedores -->
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">

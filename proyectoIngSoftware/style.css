@@ -1,0 +1,24 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header.jumbotron {
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+header .lead {
+  font-size: 1.5rem;
+}
+
+section#menu .card {
+  border: none;
+}
+
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem 0;
+}
