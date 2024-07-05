@@ -1,11 +1,12 @@
+
 body {
   font-family: 'Arial', sans-serif;
 }
 
 header.jumbotron {
   background-size: cover;
-  color: white;
-  height: 100vh;
+  color: rgb(37, 32, 32);
+  height: 40vh;
 }
 
 header .lead {
@@ -16,9 +17,27 @@ section#menu .card {
   border: none;
 }
 
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+}
 
 footer {
   background-color: #343a40;
   color: white;
   padding: 1rem 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
