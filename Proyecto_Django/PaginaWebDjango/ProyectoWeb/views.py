@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Mensaje,Comic
+from .models import Mensaje,Comic, Usuario
 import pandas as pd
 
 # Create your views here.
@@ -48,12 +48,38 @@ def nosotros(request):
     return render(request, "pages/nosotros.html", context)
 
 def sesion(request):
-    context = {}
-    return render(request, "pages/inicioSesion.html", context)
+    if request.method != "POST":
+        context = {}
+        return render(request, "pages/inicioSesion.html", context)
+    else:
+        return render(request, "pages/inicioSesion.html", context)
+
+
 
 def registro(request):
-    context = {}
-    return render(request, "pages/registrarSesion.html", context)
+
+    if request.method != "POST":
+        context = {} 
+        return render(request, "pages/registrarSesion.html", context)  
+    else:
+        email = request.POST.get("txtEmail")
+        usuario = request.POST.get("txtUser")
+        password = request.POST.get("txtPass")
+
+        obj = Usuario.objects.create(
+
+            email = email,
+            nombre = usuario,
+            password = password
+        )
+        obj.save()
+        
+        context = {
+            'mensaje' : "Registro exitoso"
+        }
+        return render(request, "pages/inicioSesion.html", context)
+
+    
 
 def mensajes(request):
     mensajes = Mensaje.objects.all()

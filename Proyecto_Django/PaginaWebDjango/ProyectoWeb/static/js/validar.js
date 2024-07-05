@@ -25,13 +25,13 @@ $(document).ready(function () {
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-        if (String(user).length < 4 || String(user).length > 12) {
+        if (!emailPattern.test(email)) {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >El nombre de usuario debe ser entre 4 y 12 caracteres.</div>");
-        } else if (String(pass).length < 8 || String(pass).length > 16) {
+        } else if (String(user).length < 4 || String(user).length > 12)   {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >La contraseña debe ser entre 8 y 16 caracteres.</div>");
-        } else if (String(pass2) != String(pass)) {
+        } else if (String(pass).length < 8 || String(pass).length > 16)   {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >La contraseña no coincide.</div>");
-        } else if (!emailPattern.test(email)) {
+        } else if (String(pass2) != String(pass))  {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >El correo no es valido.</div>");
         } else {
             return true;
@@ -71,6 +71,7 @@ $(document).ready(function () {
         } else {
             return true;
         }
+        
     }
 
     /* Funcion Validar login */
