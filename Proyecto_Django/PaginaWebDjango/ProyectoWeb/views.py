@@ -169,7 +169,7 @@ def subirComics(request):
             ruta_img = ruta_imagen,
 
         )
-        obj.save
+        obj.save()
         context = {
             "mensaje": "Registro Exitoso",
         }

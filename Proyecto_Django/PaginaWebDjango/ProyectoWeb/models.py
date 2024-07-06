@@ -18,7 +18,7 @@ class Mensaje(models.Model):
         )
     
 class Usuario(models.Model):
-    email = models.EmailField(primary_key=True, max_length=100, unique=True, blank=True)
+    email = models.EmailField(primary_key=True, max_length=100, unique=True, blank=False)
     nombre = models.CharField(max_length=14)
     password = models.CharField(max_length=16)
     
