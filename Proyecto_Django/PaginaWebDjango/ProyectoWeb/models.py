@@ -1,5 +1,13 @@
 from django.db import models
 
+# entrar al panel de django
+# admin
+# 1234
+
+# entrar al crud
+# ugo
+# 1234
+
 # Create your models here.
 class Mensaje(models.Model):
     id_mensaje = models.AutoField(primary_key=True, db_column='idMensaje')
