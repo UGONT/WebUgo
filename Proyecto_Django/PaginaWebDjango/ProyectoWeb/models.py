@@ -49,3 +49,4 @@ class Comic(models.Model):
             + ", disponible: "
             + str(self.disponible)
         )
+

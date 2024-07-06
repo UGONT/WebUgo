@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Mensaje,Comic, Usuario
 import pandas as pd
+from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 
 # Create your views here.
 # pip install pandas, openpyxl
@@ -47,12 +50,25 @@ def nosotros(request):
     context = {}
     return render(request, "pages/nosotros.html", context)
 
+"""conectar"""
 def sesion(request):
-    if request.method != "POST":
-        context = {}
-        return render(request, "pages/inicioSesion.html", context)
+    if request.method == "POST":
+        username = request.POST.get("email")
+        password = request.POST.get("pass")
+        if username == "ugo" and password == "1234":
+            request.session["user"] = username
+            comics = Comic.objects.all()
+            context = {
+                'comics': comics
+            }
+            return render(request, "pages/admin/crud_comics.html", context)
+        else:
+            context = {
+                'mensaje': "usuario o contraseña incorrecta"
+            }
+            return render(request, "pages/inicioSesion.html", context)
     else:
-        return render(request, "pages/inicioSesion.html", context)
+        return render(request, "pages/inicioSesion.html")
 
 
 
@@ -107,7 +123,8 @@ def mensaje_del(request, pk):
         }
         
         return render(request, "pages/admin/mensajes.html", context)
-    
+
+
 def subirComics(request):
 
     if request.method != "POST":
@@ -141,40 +158,46 @@ def subirComics(request):
         return render(request, "pages/admin/subirComics.html", context)
 
     else:
+        try:
+            editorial = request.POST.get('editorial')
+            titulo = request.POST.get('titulo')
+            precio = request.POST.get('precio')
+            autores = request.POST.get('autores')
+            idioma = request.POST.get('idioma')
+            descripcion = request.POST.get('descripcion')
+            formato = request.POST.get('formato')
+            disponibles = request.POST.get('disponibles')
+            editorial_original = request.POST.get('editorial_original')
+            isbn = request.POST.get('isbn')
+            ruta_imagen = request.POST.get('ruta_imagen')
 
-        editorial = request.POST.get('editorial')
-        titulo = request.POST.get('titulo')
-        precio = request.POST.get('precio')
-        autores = request.POST.get('autores')
-        idioma = request.POST.get('idioma')
-        descripcion = request.POST.get('descripcion')
-        formato = request.POST.get('formato')
-        disponibles = request.POST.get('disponibles')
-        editorial_original = request.POST.get('editorial_original')
-        isbn = request.POST.get('isbn')
-        ruta_imagen = request.POST.get('ruta_imagen')
+            obj = Comic.objects.create(
 
-        obj = Comic.objects.create(
+                editorial = editorial,
+                titulo = titulo,
+                precio = precio,
+                autor = autores,
+                idioma = idioma,
+                descripcion = descripcion,
+                formato = formato,
+                disponible = disponibles,
+                edi_original = editorial_original,
+                isbn = isbn,
+                ruta_img = ruta_imagen,
 
-            editorial = editorial,
-            titulo = titulo,
-            precio = precio,
-            autor = autores,
-            idioma = idioma,
-            descripcion = descripcion,
-            formato = formato,
-            disponible = disponibles,
-            edi_original = editorial_original,
-            isbn = isbn,
-            ruta_img = ruta_imagen,
-
-        )
-        obj.save()
-        context = {
-            "mensaje": "Registro Exitoso",
-        }
-        context = {}
-        return render(request, "pages/subirComics.html", context)
+            )
+            obj.save()
+            context = {
+                "mensaje": "Registro Exitoso",
+            }
+            context = {}
+            return render(request, "pages/admin/subirComics.html", context)
+        except Exception as e:
+            context = {
+            "mensaje": "Ocurrió un error al registrar el comic",
+            "error": str(e),
+            }
+            return render(request, "pages/admin/subirComics.html", context)
     
 
 def verComic(request, pk):
@@ -186,10 +209,14 @@ def verComic(request, pk):
     }
     return render(request, "pages/vistaComic.html", context)
 
+""" @login_required """
 def crudComics(request):
+    if "user" not in request.session:
+        return redirect("sesion")
+    
     comics = Comic.objects.all()
     context = {
-        'comics': comics
+        'comics' : comics
     }
     return render(request, "pages/admin/crud_comics.html", context)
 

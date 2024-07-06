@@ -13,7 +13,7 @@
           <a href="{% url 'index' %}"><img id="logo" style="width: 120px;height: 120px;" src="{% static 'img/logo_pagina.jfif' %} " alt="" /></a>
         </div>
         <!-- Barra de búsqueda -->
-        <div class="col-6 ">
+        <div class="col-6">
           <div class="input-group mx-5 px-4">
             <input type="text" class="form-control" placeholder="Buscar productos..." />
             <button class="btn btn-outline bg-primary" type="button">Buscar</button>
@@ -21,9 +21,8 @@
         </div>
         <!-- Carrito -->
         <div class="col-4 text-center d-flex align-items-center justify-content-center">
+          <a href="{% url 'sesion' %}"><img src="{% static 'img/icoSesion.png' %}" class="mx-3" alt="" style="height: 40px; width: 40px;" /></a>
 
-          <a href="{% url 'sesion' %}"><img src="{% static "img/icoSesion.png" %}" class="mx-3" alt="" style="height: 40px; width: 40px;"></a>
-          
           <a href="" class="d-flex align-items-center" style="text-decoration: none; color: black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <img id="carrito" src="{% static 'img/carrito.png' %}" alt="" />
             <h6 class="mb-0 ms-2"></h6>
@@ -48,4 +47,36 @@
   </div>
 
   <button id="scrollToTopBtn" class="btn btn-floating"><img src="{% static 'img/superman.png' %}" alt="" style="height: 90px;  width: 40px;" /></button>
+
+  <!-- Offcanvas Carrito -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Resumen Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="row flex-grow-1">
+        <ul id="listaCarrito" class="list-group">
+          <!-- Aquí se agregarán los productos dinámicamente -->
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <h5 id="totalCarrito">TOTAL: $0</h5>
+        <a href=""><button type="button" class="btn btn-success w-100">Procesar compra</button></a>
+      </div>
+    </div>
+  </div>
+  
 </header>
+{% comment %} <div class="col-6">
+  <img src="{% static 'img/comic_1.webp' %}" alt="..." class="img-fluid" />
+</div>
+<div class="col-6">
+  <h6>BATMAN: VENENO</h6>
+  <p>
+    hola ho la holal. holal hol holaholal hola hola hola lore<br />
+  </p>
+  <h6>$10.000</h6>
+
+  <button type="button" class="btn btn-danger">Eliminar</button>
+</div> {% endcomment %}

@@ -75,7 +75,7 @@ $(document).ready(function () {
     }
 
     /* Funcion Validar login */
-    $('#btnIniciar').click(function () {
+    /* $('#btnIniciar').click(function () {
         let email = $('#email').val();
         let pass = $('#pass').val();
         let emailGuardado = localStorage.getItem('email');
@@ -88,12 +88,12 @@ $(document).ready(function () {
 
         } else {
             $("#estado").html("<div class='alert alert-danger w-50 mx-auto text-center' >Correo o contraseña incorrectos.</div>");
-            /* setTimeout(() => {
+            setTimeout(() => {
                 $("formulario").submit()
-            }, 1500); */
+            }, 1500);
             
         }
-    })
+    }) */
 
     
 })
