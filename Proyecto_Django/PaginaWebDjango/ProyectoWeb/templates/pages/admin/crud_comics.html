@@ -15,7 +15,8 @@
           <div>
             <h2 class="my-3">Lista Comics</h2>
             <a href="{% url "subirComics" %}"><button class="btn btn-success mb-3">Agregar Comic</button></a>
-            <a href="{% url "sesion" %}"><button class="btn btn-secondary mb-3">Salir</button></a>
+            <a href="{% url "mensajes" %}"><button class="btn btn-success mb-3">Ver mensajes</button></a>
+            <a href="{% url "logout" %}"><button class="btn btn-secondary mb-3">Salir</button></a>
           </div>
           {% if mensaje %}
             <div class="alert alert-info w-50 mx-auto">{{ mensaje }}</div>

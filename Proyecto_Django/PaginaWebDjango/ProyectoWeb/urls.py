@@ -10,6 +10,7 @@ urlpatterns = [
     path('nosotros', views.nosotros, name='nosotros'),
     path('sesion/', views.sesion, name='sesion'),
     path('registro', views.registro, name='registro'),
+    path('perfil', views.perfil, name='perfil'),
     path('mensajes', views.mensajes, name='mensajes'),
     path('mensaje_del/<str:pk>', views.mensaje_del, name='mensaje_del'),
     path('comic_del/<str:pk>', views.comic_del, name='comic_del'),
@@ -17,4 +18,7 @@ urlpatterns = [
     path('verComic/<str:pk>', views.verComic, name='verComic'),
     path('comic_edit/<str:pk>', views.comic_edit, name='comic_edit'),
     path('crudComics', views.crudComics, name='crudComics'),
+
+    path("login", views.sesion, name="login"),
+    path("logout", views.desconectar, name="logout"),
 ]

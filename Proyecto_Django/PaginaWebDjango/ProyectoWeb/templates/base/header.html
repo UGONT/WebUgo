@@ -21,8 +21,15 @@
         </div>
         <!-- Carrito -->
         <div class="col-4 text-center d-flex align-items-center justify-content-center">
-          <a href="{% url 'sesion' %}"><img src="{% static 'img/icoSesion.png' %}" class="mx-3" alt="" style="height: 40px; width: 40px;" /></a>
-
+          <h6 class="mb-0 ms-2">
+            {% if user %}
+              {{user.username}}
+              <a href="{% url 'perfil' %}"><img src="{% static 'img/icoSesion.png' %}" class="mx-3" alt="" style="height: 40px; width: 40px;" /></a>
+            {% else %}
+              Iniciar sesion
+            <a href="{% url 'sesion' %}"><img src="{% static 'img/icoSesion.png' %}" class="mx-3" alt="" style="height: 40px; width: 40px;" /></a>
+            {% endif %}
+          </h6>
           <a href="" class="d-flex align-items-center" style="text-decoration: none; color: black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <img id="carrito" src="{% static 'img/carrito.png' %}" alt="" />
             <h6 class="mb-0 ms-2"></h6>
