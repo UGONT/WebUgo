@@ -226,15 +226,40 @@ def comic_del(request, pk):
         
         return render(request, "pages/admin/crud_comics.html", context)
 
-  
-def comic_edit(request, pk):
 
+
+  
+def comic_find(request, pk):
     comic = Comic.objects.get(id_comic = pk)
     context = {
         'comic':comic,
     }
     return render(request, "pages/admin/editComic.html", context)
 
+def comic_edit(request,pk):
+    comic = Comic.objects.get(id_comic = pk)
+    if request.method=="POST":
+
+        comic.editorial = request.POST.get('editorial')
+        comic.titulo = request.POST.get('titulo')
+        comic.precio = request.POST.get('precio')
+        comic.autor = request.POST.get('autores')
+        comic.idioma = request.POST.get('idioma')
+        comic.descripcion = request.POST.get('descripcion')
+        comic.formato = request.POST.get('formato')
+        comic.disponible = request.POST.get('disponibles')
+        comic.edi_original = request.POST.get('editorial_original')
+        comic.isbn = request.POST.get('isbn')
+        comic.ruta_img= request.POST.get('ruta_imagen')
+
+        comic.save()
+        comics = Comic.objects.all()
+        context = {
+            "mensaje": "Modificado con Exito",
+            'comics' : comics
+        }
+        return render(request, "pages/admin/crud_comics.html", context)
+    
 @login_required
 def crudComics(request):
     if request.user.is_superuser or request.user.groups.filter(name='administrador').exists():

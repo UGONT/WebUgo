@@ -4,9 +4,6 @@ from django.db import models
 # admin
 # 1234
 
-# entrar al crud
-# ugo
-# 1234
 
 # Create your models here.
 class Mensaje(models.Model):

@@ -17,7 +17,7 @@
                     <h1 class="mb-4 text-center mx-auto">Modificar Comic</h1>
                     <a href="{% url "crudComics" %}"><button class="btn btn-secondary mb-3">Volver</button></a>
                 </div>
-                <form method="post" enctype="multipart/form-data" class="col-8 mx-auto mt-3 text-center">
+                <form method="post" action="{% url 'comic_edit' pk=comic.id_comic %}" enctype="multipart/form-data" class="col-8 mx-auto mt-3 text-center">
                     {% csrf_token %}
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">
                         <input type="text" value="{{comic.editorial}}" class="form-control" id="editorial" name="editorial" placeholder="" required>
@@ -40,27 +40,27 @@
                         <label for="idioma">Idioma</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">   
-                        <textarea class="form-control" value="{{comic.descripcion}}" id="descripcion" name="descripcion" rows="3" placeholder="" required></textarea>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="" required>{{comic.descripcion}}</textarea>
                         <label for="descripcion">Descripción</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">                       
-                        <input type="text" class="form-control" id="formato" name="formato" placeholder="" required>
+                        <input type="text" class="form-control" value="{{comic.formato}}" id="formato" name="formato" placeholder="" required>
                         <label for="formato">Formato</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                        <input type="number" class="form-control" id="disponibles" name="disponibles" placeholder="" required>
+                        <input type="number" class="form-control" value="{{comic.disponible}}" id="disponibles" name="disponibles" placeholder="" required>
                         <label for="disponibles">Disponibles</label>
-                    </div>
+                    </div> 
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                        <input type="text" class="form-control" id="editorial_original" name="editorial_original" placeholder="" required>
+                        <input type="text" class="form-control" value="{{comic.edi_original}}" id="editorial_original" name="editorial_original" placeholder="" required>
                         <label for="editorial_original">Editorial Original</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                        <input type="text" class="form-control" id="isbn" name="isbn" placeholder="" required>
+                        <input type="text" class="form-control" value="{{comic.isbn}}" id="isbn" name="isbn" placeholder="" required>
                         <label for="isbn">ISBN</label>
                     </div>
                     <div class="form-floating w-50 mx-auto mb-3 mt-3">
-                        <input type="text" class="form-control" id="ruta_imagen" name="ruta_imagen" placeholder="" required>
+                        <input type="text" class="form-control" value="{{comic.ruta_img}}" id="ruta_imagen" name="ruta_imagen" placeholder="" required>
                         <label for="ruta_imagen">Ruta de Imagen</label>
                     </div>
                     
