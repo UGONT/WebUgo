@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Administrador - El Comilon</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/proyectoIngSoftware/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/proyectoIngSoftware/inicio.html"><h3>El Comilon</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="/proyectoIngSoftware/inicio.html"><h4>Inicio</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="/proyectoIngSoftware/menu.html"><h4>Catalogo</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="/proyectoIngSoftware/perfil.html"><h4>Perfil</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="/proyectoIngSoftware/carrito.html"><h4>Carrito</h4></a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Vista de Administrador</h1>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Proveedores de Comida</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Contacto</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Proveedor 1</td>
+                            <td>Gustavo Perez</td>
+                            <td>+123456789</td>
+                            <td>Gustavo@proveedor1.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Proveedor 2</td>
+                            <td>Juan Garcia</td>
+                            <td>+987654321</td>
+                            <td>Juan@proveedor2.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="mb-3">Actualizar Catalogo de Comida</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombrePlato">Nombre del Plato</label>
+                        <input type="text" class="form-control" id="nombrePlato" placeholder="Nombre del Plato">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="descripcionPlato">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcionPlato" placeholder="Descripción del Plato">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="precioPlato">Precio</label>
+                        <input type="text" class="form-control" id="precioPlato" placeholder="Precio">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="imagenPlato">Imagen</label>
+                        <input type="file" class="form-control-file" id="imagenPlato">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Actualizar Catalogo</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 El Comilon. Todos los derechos reservados.</p>
+            <p>
+                <a href="#" class="text-white">Terminos y Condiciones</a> |
+                <a href="#" class="text-white">Politica de Privacidad</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
